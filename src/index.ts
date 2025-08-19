@@ -1,3 +1,5 @@
+export * from './api/userApi'
+
 export * from './domain/BlueprintConnection'
 export * from './domain/Component'
 export * from './domain/ComponentPartOfSolution'
