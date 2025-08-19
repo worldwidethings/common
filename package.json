@@ -38,7 +38,7 @@
   "homepage": "https://github.com/your-company/your-lib-name#readme",
   "dependencies": {
     "coderitter-api-rmc": "^2.0.0",
-    "knight-object-db": "^3.0.1"
+    "knight-object-db": "^3.0.2"
   },
   "devDependencies": {
     "@types/chai": "^5.2.2",
