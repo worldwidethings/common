@@ -1,4 +1,4 @@
-import { Schema } from 'knight-object-db'
+import type { Schema } from 'knight-object-db'
 
 export const objectDbSchema = {
   'BlueprintConnection': {
