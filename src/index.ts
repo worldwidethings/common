@@ -1,3 +1,5 @@
+export * from './Instantiator'
+
 export * from './api/userApi'
 
 export * from './domain/BlueprintConnection'
