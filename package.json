@@ -1,0 +1,54 @@
+{
+  "name": "wwt-objects",
+  "version": "1.0.0",
+  "type": "module",
+  "sideEffects": false,
+  "description": "",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/types/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "rimraf dist && tsup src/index.ts --format esm,cjs --sourcemap --minify --treeshake --clean --platform neutral --target es2020",
+    "types": "tsc -p tsconfig.types.json",
+    "typecheck": "tsc -p tsconfig.base.json --noEmit",
+    "prepare": "npm run build && npm run types",
+    "test": "mocha test/*.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/your-company/your-lib-name.git"
+  },
+  "keywords": [
+    ""
+  ],
+  "author": "WorldWideThings GmbH",
+  "bugs": {
+    "url": "https://github.com/your-company/your-lib-name/issues"
+  },
+  "homepage": "https://github.com/your-company/your-lib-name#readme",
+  "dependencies": {
+    "coderitter-api-rmc": "^2.0.0",
+    "knight-object-db": "^3.0.1"
+  },
+  "devDependencies": {
+    "@types/chai": "^5.2.2",
+    "@types/mocha": "^10.0.10",
+    "chai": "^5.3.1",
+    "cross-env": "^10.0.0",
+    "mocha": "^11.7.1",
+    "rimraf": "^6.0.1",
+    "tsup": "^8.5.0",
+    "tsx": "^4.20.4",
+    "typescript": "^5.9.2"
+  }
+}
