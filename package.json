@@ -27,6 +27,7 @@
     "dist"
   ],
   "scripts": {
+    "prepare": "npm run build",
     "build": "rimraf dist && tsup && npm run types",
     "types": "npm run types:shared && npm run types:node && npm run types:browser",
     "types:shared": "tsc -p tsconfig.types.shared.json",
