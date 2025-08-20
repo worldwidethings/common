@@ -1,5 +1,5 @@
 import { Result } from 'coderitter-api-rmc'
-import { User } from '../'
+import { User } from '../domain/User'
 
 export interface UserSetPasswordParameters {
   userId: number
