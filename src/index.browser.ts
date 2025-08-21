@@ -1,5 +1,5 @@
 export * from './browser/domainLogic/BlueprintConnectionLogic'
-export * from './browser/domainLogic/Component'
+export * from './browser/domainLogic/ComponentLogic'
 export * from './browser/domainLogic/ComponentPartOfSolutionLogic'
 export * from './browser/domainLogic/ConnectionLogic'
 export * from './browser/domainLogic/ConnectionPointLogic'
