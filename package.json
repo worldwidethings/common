@@ -1,5 +1,5 @@
 {
-  "name": "wwt-objects",
+  "name": "wwt-common",
   "version": "2.0.0",
   "type": "module",
   "sideEffects": false,
