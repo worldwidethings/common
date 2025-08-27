@@ -1,3 +1,5 @@
+export { ChangeResult, CountResult, GetResult, Result } from 'coderitter-api-rmc'
+
 export * from './shared/Instantiator'
 
 export * from './shared/api/userApi'
@@ -39,3 +41,4 @@ export * from './shared/domain/solution/rights/SetupVersionRight'
 export * from './shared/domain/solution/rights/SolutionRight'
 export * from './shared/domain/solution/SetupVersion'
 export * from './shared/domain/solution/Solution'
+
