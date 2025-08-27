@@ -41,16 +41,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/your-company/your-lib-name.git"
+    "url": "git+https://github.com/worldwidethings/wwt-common.git"
   },
   "keywords": [
     ""
   ],
   "author": "WorldWideThings GmbH",
   "bugs": {
-    "url": "https://github.com/your-company/your-lib-name/issues"
+    "url": "https://github.com/worldwidethings/wwt-common/issues"
   },
-  "homepage": "https://github.com/your-company/your-lib-name#readme",
+  "homepage": "https://github.com/worldwidethings/wwt-common#readme",
   "peerDependencies": {
     "knight-change": "^2.0.0",
     "knight-criteria": "^2.2.1",
