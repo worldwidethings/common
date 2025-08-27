@@ -54,6 +54,7 @@
   "peerDependencies": {
     "knight-change": "^2.0.0",
     "knight-criteria": "^2.2.1",
+    "knight-json": "^1.0.1",
     "knight-misfit": "^1.0.0",
     "knight-object-db": "^3.0.2"
   },
@@ -69,7 +70,6 @@
     "typescript": "^5.9.2"
   },
   "dependencies": {
-    "coderitter-api-rmc": "^2.0.0",
-    "knight-json": "^1.0.1"
+    "coderitter-api-rmc": "^2.0.0"
   }
 }
