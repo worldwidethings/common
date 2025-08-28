@@ -1,3 +1,4 @@
+import { Organization } from '../organization/Organization'
 import { InterfaceVersion } from './InterfaceVersion'
 import { InterfaceRight } from './rights/InterfaceRight'
 
@@ -8,7 +9,10 @@ export class Interface {
   description?: string
   name?: string
 
+  organizationId?: number
+
   interfaceVersions?: InterfaceVersion[]
+  organization?: Organization
   rights?: InterfaceRight[]
 
   constructor(data?: Partial<Interface>) {

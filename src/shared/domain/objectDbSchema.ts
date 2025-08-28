@@ -298,6 +298,12 @@ export const objectDbSchema = {
          otherEntity: 'InterfaceVersion',
          otherId: 'interfaceId'
       },
+      'organization': {
+        manyToOne: true,
+        thisId: 'organizationId',
+        otherEntity: 'Organization',
+        otherId: 'id'
+      },
       'rights': {
         oneToMany: true,
         thisId: 'id',
