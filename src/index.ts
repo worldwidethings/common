@@ -1,9 +1,8 @@
-export { ChangeResult, CountResult, GetResult, Result } from 'coderitter-api-rmc'
+export { ChangeResult, CountResult, GetResult, type RemoteMethodCall, Result } from 'coderitter-api-rmc'
 
 export * from './shared/Instantiator'
 
 export * from './shared/api/userApi'
-export * from './shared/api/RemoteMethodCall'
 
 export * from './shared/domain/objectDbSchema'
 export * from './shared/domain/Right'
