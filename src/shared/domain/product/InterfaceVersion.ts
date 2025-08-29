@@ -1,7 +1,7 @@
 import { InterfaceVersionRight } from '../right/InterfaceVersionRight'
 import { ConnectionPoint } from './ConnectionPoint'
 import { Interface } from './Interface'
-import { OffersInterfaceVersion } from './OffersInterfaceVersion'
+import { ProductVersionInterface } from './ProductVersionInterface'
 
 /**
  * IoT components can be connected to other IoT components, either to form a
@@ -26,7 +26,7 @@ export class InterfaceVersion {
 
   connectionPoints?: ConnectionPoint[]
   interface?: Interface
-  offersInterfaceVersions?: OffersInterfaceVersion[]
+  productVersionInterfaces?: ProductVersionInterface[]
   rights?: InterfaceVersionRight[]
 
   constructor(data?: Partial<InterfaceVersion>) {

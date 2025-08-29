@@ -1,8 +1,8 @@
-import { ComponentPartOfSolutionRight } from '../right/ComponentPartOfSolutionRight'
+import { SolutionUsesComponentRight } from '../right/SolutionUsesComponentRight'
 import { Component } from './Component'
 import { Solution } from './Solution'
 
-export class ComponentPartOfSolution {
+export class SolutionUsesComponent {
   id?: number
 
   creationDate?: Date
@@ -12,10 +12,10 @@ export class ComponentPartOfSolution {
   solutionId?: number
 
   component?: Component
-  rights?: ComponentPartOfSolutionRight[]
+  rights?: SolutionUsesComponentRight[]
   solution?: Solution
 
-  constructor(data?: Partial<ComponentPartOfSolution>) {
+  constructor(data?: Partial<SolutionUsesComponent>) {
     Object.assign(this, data)
   }
 }

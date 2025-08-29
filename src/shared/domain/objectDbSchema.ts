@@ -49,55 +49,13 @@ export const objectDbSchema = {
     }
   },
 
-  'ComponentPartOfSolution': {
-    idProps: [ 'id' ],
-    relationships: {
-      'component': {
-        manyToOne: true,
-        thisId: 'componentId',
-        otherEntity: 'Component',
-        otherId: 'id'
-      },
-      'rights': {
-        oneToMany: true,
-        thisId: 'id',
-        otherEntity: 'ComponentPartOfSolutionRight',
-        otherId: 'componentPartOfSolutionId'
-      },
-      'solution': {
-        manyToOne: true,
-        thisId: 'solutionId',
-        otherEntity: 'Solution',
-        otherId: 'id'
-      }
-    }
-  },
-
-  'ComponentPartOfSolutionRight': {
-    idProps: [ 'id' ],
-    relationships: {
-      'componentPartOfSolution': {
-        manyToOne: true,
-        thisId: 'componentPartOfSolutionId',
-        otherEntity: 'ComponentPartOfSolution',
-        otherId: 'id'
-      },
-      'user': {
-        manyToOne: true,
-        thisId: 'userId',
-        otherEntity: 'User',
-        otherId: 'id'
-      }
-    }
-  },
-
   'Component': {
     idProps: [ 'id' ],
     relationships: {
-      'componentPartOfSolutions': {
+      'solutionUsesComponents': {
          oneToMany: true,
          thisId: 'id',
-         otherEntity: 'ComponentPartOfSolution',
+         otherEntity: 'SolutionUsesComponent',
          otherId: 'componentId'
       },
       'connections': {
@@ -316,10 +274,10 @@ export const objectDbSchema = {
         otherEntity: 'Interface',
         otherId: 'id'
       },
-      'offersInterfaceVersions': {
+      'productVersionInterfaces': {
          oneToMany: true,
          thisId: 'id',
-         otherEntity: 'OffersInterfaceVersion',
+         otherEntity: 'ProductVersionInterface',
          otherId: 'interfaceVersionId'
       },
       'rights': {
@@ -349,7 +307,7 @@ export const objectDbSchema = {
     }
   },
 
-  'OffersInterfaceVersion': {
+  'ProductVersionInterface': {
     idProps: [ 'id' ],
     relationships: {
       'interfaceVersion': {
@@ -367,19 +325,19 @@ export const objectDbSchema = {
       'rights': {
         oneToMany: true,
         thisId: 'id',
-        otherEntity: 'OffersInterfaceVersionRight',
-        otherId: 'offersInterfaceVersionId'
+        otherEntity: 'ProductVersionInterfaceRight',
+        otherId: 'productVersionInterfaceId'
       }
     }
   },
 
-  'OffersInterfaceVersionRight': {
+  'ProductVersionInterfaceRight': {
     idProps: [ 'id' ],
     relationships: {
-      'offersInterfaceVersion': {
+      'productVersionInterface': {
         manyToOne: true,
-        thisId: 'offersInterfaceVersionId',
-        otherEntity: 'OffersInterfaceVersion',
+        thisId: 'productVersionInterfaceId',
+        otherEntity: 'ProductVersionInterface',
         otherId: 'id'
       },
       'user': {
@@ -526,10 +484,10 @@ export const objectDbSchema = {
          otherEntity: 'Component',
          otherId: 'productVersionId'
       },
-      'offersInterfaceVersions': {
+      'productVersionInterfaces': {
          oneToMany: true,
          thisId: 'id',
-         otherEntity: 'OffersInterfaceVersion',
+         otherEntity: 'ProductVersionInterface',
          otherId: 'productVersionId'
       },
       'product': {
@@ -718,12 +676,6 @@ export const objectDbSchema = {
   'Solution': {
     idProps: [ 'id' ],
     relationships: {
-      'componentPartOfSolutions': {
-         oneToMany: true,
-         thisId: 'id',
-         otherEntity: 'ComponentPartOfSolution',
-         otherId: 'solutionId'
-      },
       'organization': {
          manyToOne: true,
          thisId: 'organizationId',
@@ -734,6 +686,12 @@ export const objectDbSchema = {
         oneToMany: true,
         thisId: 'id',
         otherEntity: 'SolutionRight',
+        otherId: 'solutionId'
+      },
+      'solutionUsesComponents': {
+        oneToMany: true,
+        thisId: 'id',
+        otherEntity: 'SolutionUsesComponent',
         otherId: 'solutionId'
       }
     }
@@ -746,6 +704,48 @@ export const objectDbSchema = {
         manyToOne: true,
         thisId: 'solutionId',
         otherEntity: 'Solution',
+        otherId: 'id'
+      },
+      'user': {
+        manyToOne: true,
+        thisId: 'userId',
+        otherEntity: 'User',
+        otherId: 'id'
+      }
+    }
+  },
+
+    'SolutionUsesComponent': {
+    idProps: [ 'id' ],
+    relationships: {
+      'component': {
+        manyToOne: true,
+        thisId: 'componentId',
+        otherEntity: 'Component',
+        otherId: 'id'
+      },
+      'rights': {
+        oneToMany: true,
+        thisId: 'id',
+        otherEntity: 'SolutionUsesComponentRight',
+        otherId: 'solutionUsesComponentId'
+      },
+      'solution': {
+        manyToOne: true,
+        thisId: 'solutionId',
+        otherEntity: 'Solution',
+        otherId: 'id'
+      }
+    }
+  },
+
+  'SolutionUsesComponentRight': {
+    idProps: [ 'id' ],
+    relationships: {
+      'solutionUsesComponent': {
+        manyToOne: true,
+        thisId: 'solutionUsesComponentId',
+        otherEntity: 'SolutionUsesComponent',
         otherId: 'id'
       },
       'user': {
@@ -772,12 +772,6 @@ export const objectDbSchema = {
         otherEntity: 'ComponentRight',
         otherId: 'userId'
       },
-      componentPartOfSolutionRights: {
-        oneToMany: true,
-        thisId: 'id',
-        otherEntity: 'ComponentPartOfSolutionRight',
-        otherId: 'userId'
-      },
       connectionPointRights: {
         oneToMany: true,
         thisId: 'id',
@@ -796,10 +790,10 @@ export const objectDbSchema = {
         otherEntity: 'InterfaceRight',
         otherId: 'userId'
       },
-      offersInterfaceVersionRights: {
+      productVersionInterfaceRights: {
         oneToMany: true,
         thisId: 'id',
-        otherEntity: 'OffersInterfaceVersionRight',
+        otherEntity: 'ProductVersionInterfaceRight',
         otherId: 'userId'
       },
       organizationRights: {
@@ -842,6 +836,12 @@ export const objectDbSchema = {
         oneToMany: true,
         thisId: 'id',
         otherEntity: 'SolutionRight',
+        otherId: 'userId'
+      },
+      solutionUsesComponentRights: {
+        oneToMany: true,
+        thisId: 'id',
+        otherEntity: 'SolutionUsesComponentRight',
         otherId: 'userId'
       },
       userRights: {

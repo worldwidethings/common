@@ -6,33 +6,33 @@ import { BlueprintConnection } from './domain/product/BlueprintConnection'
 import { ConnectionPoint } from './domain/product/ConnectionPoint'
 import { Interface } from './domain/product/Interface'
 import { InterfaceVersion } from './domain/product/InterfaceVersion'
-import { OffersInterfaceVersion } from './domain/product/OffersInterfaceVersion'
 import { Product } from './domain/product/Product'
 import { ProductType } from './domain/product/ProductType'
 import { ProductVersion } from './domain/product/ProductVersion'
+import { ProductVersionInterface } from './domain/product/ProductVersionInterface'
 import { SetupBlueprint } from './domain/product/SetupBlueprint'
 import { SetupBlueprintVersion } from './domain/product/SetupBlueprintVersion'
 import { BlueprintConnectionRight } from './domain/right/BlueprintConnectionRight'
-import { ComponentPartOfSolutionRight } from './domain/right/ComponentPartOfSolutionRight'
 import { ComponentRight } from './domain/right/ComponentRight'
 import { ConnectionPointRight } from './domain/right/ConnectionPointRight'
 import { ConnectionRight } from './domain/right/ConnectionRight'
 import { InterfaceRight } from './domain/right/InterfaceRight'
 import { InterfaceVersionRight } from './domain/right/InterfaceVersionRight'
-import { OffersInterfaceVersionRight } from './domain/right/OffersInterfaceVersionRight'
 import { OrganizationRight } from './domain/right/OrganizationRight'
 import { ProductRight } from './domain/right/ProductRight'
+import { ProductVersionInterfaceRight } from './domain/right/ProductVersionInterfaceRight'
 import { ProductVersionRight } from './domain/right/ProductVersionRight'
 import { SetupBlueprintRight } from './domain/right/SetupBlueprintRight'
 import { SetupBlueprintVersionRight } from './domain/right/SetupBlueprintVersionRight'
 import { SetupVersionRight } from './domain/right/SetupVersionRight'
 import { SolutionRight } from './domain/right/SolutionRight'
+import { SolutionUsesComponentRight } from './domain/right/SolutionUsesComponentRight'
 import { UserRight } from './domain/right/UserRight'
 import { Component } from './domain/solution/Component'
-import { ComponentPartOfSolution } from './domain/solution/ComponentPartOfSolution'
 import { Connection } from './domain/solution/Connection'
 import { SetupVersion } from './domain/solution/SetupVersion'
 import { Solution } from './domain/solution/Solution'
+import { SolutionUsesComponent } from './domain/solution/SolutionUsesComponent'
 
 export const instantiator = {
     Result: () => new Result,
@@ -47,8 +47,6 @@ export const instantiator = {
     BlueprintConnectionRight: () => new BlueprintConnectionRight,
     Component: () => new Component,
     ComponentRight: () => new ComponentRight,
-    ComponentPartOfSolution: () => new ComponentPartOfSolution,
-    ComponentPartOfSolutionRight: () => new ComponentPartOfSolutionRight,
     Connection: () => new Connection,
     ConnectionRight: () => new ConnectionRight,
     ConnectionPoint: () => new ConnectionPoint,
@@ -57,8 +55,8 @@ export const instantiator = {
     InterfaceRight: () => new InterfaceRight,
     InterfaceVersion: () => new InterfaceVersion,
     InterfaceVersionRight: () => new InterfaceVersionRight,
-    OffersInterfaceVersion: () => new OffersInterfaceVersion,
-    OffersInterfaceVersionRight: () => new OffersInterfaceVersionRight,
+    ProductVersionInterface: () => new ProductVersionInterface,
+    ProductVersionInterfaceRight: () => new ProductVersionInterfaceRight,
     Organization: () => new Organization,
     OrganizationRight: () => new OrganizationRight,
     Product: () => new Product,
@@ -74,6 +72,8 @@ export const instantiator = {
     SetupVersionRight: () => new SetupVersionRight,
     Solution: () => new Solution,
     SolutionRight: () => new SolutionRight,
+    SolutionUsesComponent: () => new SolutionUsesComponent,
+    SolutionUsesComponentRight: () => new SolutionUsesComponentRight,
     User: () => new User,
     UserRight: () => new UserRight
 } as { [className: string]: () => any }

@@ -1,6 +1,6 @@
 import { Organization } from '../organization/Organization'
 import { SolutionRight } from '../right/SolutionRight'
-import { ComponentPartOfSolution } from './ComponentPartOfSolution'
+import { SolutionUsesComponent } from './SolutionUsesComponent'
 
 export class Solution {
   id?: number
@@ -12,9 +12,9 @@ export class Solution {
 
   organizationId?: number
 
-  componentPartOfSolutions?: ComponentPartOfSolution[]
   organization?: Organization
   rights?: SolutionRight[]
+  solutionUsesComponents?: SolutionUsesComponent[]
 
   constructor(data?: Partial<Solution>) {
     Object.assign(this, data)

@@ -2,7 +2,7 @@ import { ProductVersionRight } from '../right/ProductVersionRight'
 import { Component } from '../solution/Component'
 import { BlueprintConnection } from './BlueprintConnection'
 import { ConnectionPoint } from './ConnectionPoint'
-import { OffersInterfaceVersion } from './OffersInterfaceVersion'
+import { ProductVersionInterface } from './ProductVersionInterface'
 import { Product } from './Product'
 import { SetupBlueprint } from './SetupBlueprint'
 
@@ -37,8 +37,8 @@ export class ProductVersion {
 
   blueprintConnections?: BlueprintConnection[]
   components?: Component[]
-  offersInterfaceVersions?: OffersInterfaceVersion[]
   product?: Product
+  productVersionInterfaces?: ProductVersionInterface[]
   rights?: ProductVersionRight[]
   setupBlueprints?: SetupBlueprint[]
 

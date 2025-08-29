@@ -1,7 +1,7 @@
 import { Organization } from '../organization/Organization'
 import { ProductVersion } from '../product/ProductVersion'
 import { ComponentRight } from '../right/ComponentRight'
-import { ComponentPartOfSolution } from './ComponentPartOfSolution'
+import { SolutionUsesComponent } from './SolutionUsesComponent'
 import { Connection } from './Connection'
 import { SetupVersion } from './SetupVersion'
 
@@ -32,13 +32,13 @@ export class Component {
   organizationId?: number
   productVersionId?: number
 
-  componentPartOfSolutions?: ComponentPartOfSolution[]
   connections?: Connection[]
   organization?: Organization
   productVersion?: ProductVersion
   rights?: ComponentRight[]
   setupConnections?: Connection[]
   setupVersions?: SetupVersion[]
+  solutionUsesComponents?: SolutionUsesComponent[]
 
   constructor(data?: Partial<Component>) {
     Object.assign(this, data)

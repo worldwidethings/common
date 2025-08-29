@@ -1,13 +1,13 @@
 import { CountResult, GetResult } from 'coderitter-api-rmc'
 import { type Criteria } from 'knight-criteria'
-import { OffersInterfaceVersionRight } from '../../../shared/domain/right/OffersInterfaceVersionRight'
+import { SolutionUsesComponentRight } from '../../../shared/domain/right/SolutionUsesComponentRight'
 import { fetchHelper } from '../fetchHelper'
 
-export function getOffersInterfaceVersionRights( 
+export function getSolutionUsesComponentRights(
   url: string | URL,
   token: string,
   criteria?: Criteria,
-  onResult?: (result: GetResult<OffersInterfaceVersionRight>) => void,
+  onResult?: (result: GetResult<SolutionUsesComponentRight>) => void,
   onError?: (error: any) => void,
   requestParams?: RequestInit
 ): void {
@@ -16,7 +16,7 @@ export function getOffersInterfaceVersionRights(
     {
       apiVersion: 1,
       token: token,
-      method: 'OffersInterfaceVersionRight.get',
+      method: 'SolutionUsesComponentRight.get',
       parameters: criteria
     },
     onResult,
@@ -25,7 +25,7 @@ export function getOffersInterfaceVersionRights(
   )
 }
 
-export function countOffersInterfaceVersionRights(
+export function countSolutionUsesComponentRights(
   url: string | URL,
   token: string,
   criteria?: Criteria,
@@ -38,7 +38,7 @@ export function countOffersInterfaceVersionRights(
     {
       apiVersion: 1,
       token: token,
-      method: 'OffersInterfaceVersionRight.count',
+      method: 'SolutionUsesComponentRight.count',
       parameters: criteria
     },
     onResult,
@@ -47,17 +47,17 @@ export function countOffersInterfaceVersionRights(
   )
 }
 
-export class OffersInterfaceVersionRightLogic {
+export class SolutionUsesComponentRightLogic {
   url: string | URL
   token: string | undefined
-  
+
   constructor(url: string | URL) {
     this.url = url
   }
 
   get(
     criteria?: Criteria,
-    onResult?: (result: GetResult<OffersInterfaceVersionRight>) => void,
+    onResult?: (result: GetResult<SolutionUsesComponentRight>) => void,
     onError?: (error: any) => void,
     requestParams?: RequestInit
   ): void {
@@ -66,7 +66,7 @@ export class OffersInterfaceVersionRightLogic {
       {
         apiVersion: 1,
         token: this.token,
-        method: 'OffersInterfaceVersionRight.get',
+        method: 'SolutionUsesComponentRight.get',
         parameters: criteria
       },
       onResult,
@@ -86,7 +86,7 @@ export class OffersInterfaceVersionRightLogic {
       {
         apiVersion: 1,
         token: this.token,
-        method: 'OffersInterfaceVersionRight.count',
+        method: 'SolutionUsesComponentRight.count',
         parameters: criteria
       },
       onResult,

@@ -1,7 +1,7 @@
 import { ChangeResult, CountResult, GetResult } from 'coderitter-api-rmc'
 import { type Criteria } from 'knight-criteria'
-import { fetchHelper } from '../fetchHelper'
 import { Solution } from '../../../shared/domain/solution/Solution'
+import { fetchHelper } from '../fetchHelper'
 
 export function getSolutions(
   url: string | URL,

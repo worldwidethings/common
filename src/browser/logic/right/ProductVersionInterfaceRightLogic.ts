@@ -1,13 +1,13 @@
 import { CountResult, GetResult } from 'coderitter-api-rmc'
 import { type Criteria } from 'knight-criteria'
-import { ComponentPartOfSolutionRight } from '../../../shared/domain/right/ComponentPartOfSolutionRight'
+import { ProductVersionInterfaceRight } from '../../../shared/domain/right/ProductVersionInterfaceRight'
 import { fetchHelper } from '../fetchHelper'
 
-export function getComponentPartOfSolutionRights(
+export function getProductVersionInterfaceRights( 
   url: string | URL,
   token: string,
   criteria?: Criteria,
-  onResult?: (result: GetResult<ComponentPartOfSolutionRight>) => void,
+  onResult?: (result: GetResult<ProductVersionInterfaceRight>) => void,
   onError?: (error: any) => void,
   requestParams?: RequestInit
 ): void {
@@ -16,7 +16,7 @@ export function getComponentPartOfSolutionRights(
     {
       apiVersion: 1,
       token: token,
-      method: 'ComponentPartOfSolutionRight.get',
+      method: 'ProductVersionInterfaceRight.get',
       parameters: criteria
     },
     onResult,
@@ -25,7 +25,7 @@ export function getComponentPartOfSolutionRights(
   )
 }
 
-export function countComponentPartOfSolutionRights(
+export function countProductVersionInterfaceRights(
   url: string | URL,
   token: string,
   criteria?: Criteria,
@@ -38,7 +38,7 @@ export function countComponentPartOfSolutionRights(
     {
       apiVersion: 1,
       token: token,
-      method: 'ComponentPartOfSolutionRight.count',
+      method: 'ProductVersionInterfaceRight.count',
       parameters: criteria
     },
     onResult,
@@ -47,17 +47,17 @@ export function countComponentPartOfSolutionRights(
   )
 }
 
-export class ComponentPartOfSolutionRightLogic {
+export class ProductVersionInterfaceRightLogic {
   url: string | URL
   token: string | undefined
-
+  
   constructor(url: string | URL) {
     this.url = url
   }
 
   get(
     criteria?: Criteria,
-    onResult?: (result: GetResult<ComponentPartOfSolutionRight>) => void,
+    onResult?: (result: GetResult<ProductVersionInterfaceRight>) => void,
     onError?: (error: any) => void,
     requestParams?: RequestInit
   ): void {
@@ -66,7 +66,7 @@ export class ComponentPartOfSolutionRightLogic {
       {
         apiVersion: 1,
         token: this.token,
-        method: 'ComponentPartOfSolutionRight.get',
+        method: 'ProductVersionInterfaceRight.get',
         parameters: criteria
       },
       onResult,
@@ -86,7 +86,7 @@ export class ComponentPartOfSolutionRightLogic {
       {
         apiVersion: 1,
         token: this.token,
-        method: 'ComponentPartOfSolutionRight.count',
+        method: 'ProductVersionInterfaceRight.count',
         parameters: criteria
       },
       onResult,

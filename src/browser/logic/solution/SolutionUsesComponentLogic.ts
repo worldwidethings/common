@@ -1,13 +1,13 @@
 import { ChangeResult, CountResult, GetResult } from 'coderitter-api-rmc'
 import { type Criteria } from 'knight-criteria'
-import { OffersInterfaceVersion } from '../../../shared/domain/product/OffersInterfaceVersion'
+import { SolutionUsesComponent } from '../../../shared/domain/solution/SolutionUsesComponent'
 import { fetchHelper } from '../fetchHelper'
 
-export function getOffersInterfaceVersions(
+export function getSolutionUsesComponents(
   url: string | URL,
   token: string,
   criteria?: Criteria,
-  onResult?: (result: GetResult<OffersInterfaceVersion>) => void,
+  onResult?: (result: GetResult<SolutionUsesComponent>) => void,
   onError?: (error: any) => void,
   requestParams?: RequestInit
 ): void {
@@ -16,7 +16,7 @@ export function getOffersInterfaceVersions(
     {
       apiVersion: 1,
       token: token,
-      method: 'OffersInterfaceVersion.get',
+      method: 'SolutionUsesComponent.get',
       parameters: criteria
     },
     onResult,
@@ -25,7 +25,7 @@ export function getOffersInterfaceVersions(
   )
 }
 
-export function countOffersInterfaceVersions(
+export function countSolutionUsesComponents(
   url: string | URL,
   token: string,
   criteria?: Criteria,
@@ -38,7 +38,7 @@ export function countOffersInterfaceVersions(
     {
       apiVersion: 1,
       token: token,
-      method: 'OffersInterfaceVersion.count',
+      method: 'SolutionUsesComponent.count',
       parameters: criteria
     },
     onResult,
@@ -47,10 +47,10 @@ export function countOffersInterfaceVersions(
   )
 }
 
-export function storeOffersInterfaceVersion(
+export function storeSolutionUsesComponent(
   url: string | URL,
   token: string,
-  offersInterfaceVersion?: Partial<OffersInterfaceVersion>,
+  SolutionUsesComponent?: Partial<SolutionUsesComponent>,
   onResult?: (result: ChangeResult) => void,
   onError?: (error: any) => void,
   requestParams?: RequestInit
@@ -60,8 +60,8 @@ export function storeOffersInterfaceVersion(
     {
       apiVersion: 1,
       token: token,
-      method: 'OffersInterfaceVersion.store',
-      parameters: offersInterfaceVersion
+      method: 'SolutionUsesComponent.store',
+      parameters: SolutionUsesComponent
     },
     onResult,
     onError,
@@ -69,10 +69,10 @@ export function storeOffersInterfaceVersion(
   )
 }
 
-export function deleteOffersInterfaceVersion(
+export function deleteSolutionUsesComponent(
   url: string | URL,
   token: string,
-  offersInterfaceVersion?: Partial<OffersInterfaceVersion>,
+  SolutionUsesComponent?: Partial<SolutionUsesComponent>,
   onResult?: (result: ChangeResult) => void,
   onError?: (error: any) => void,
   requestParams?: RequestInit
@@ -82,8 +82,8 @@ export function deleteOffersInterfaceVersion(
     {
       apiVersion: 1,
       token: token,
-      method: 'OffersInterfaceVersion.delete',
-      parameters: offersInterfaceVersion
+      method: 'SolutionUsesComponent.delete',
+      parameters: SolutionUsesComponent
     },
     onResult,
     onError,
@@ -91,7 +91,7 @@ export function deleteOffersInterfaceVersion(
   )
 }
 
-export class OffersInterfaceVersionLogic {
+export class SolutionUsesComponentLogic {
   url: string | URL
   token: string | undefined
   
@@ -101,7 +101,7 @@ export class OffersInterfaceVersionLogic {
 
   get(
     criteria?: Criteria,
-    onResult?: (result: GetResult<OffersInterfaceVersion>) => void,
+    onResult?: (result: GetResult<SolutionUsesComponent>) => void,
     onError?: (error: any) => void,
     requestParams?: RequestInit
   ): void {
@@ -110,7 +110,7 @@ export class OffersInterfaceVersionLogic {
       {
         apiVersion: 1,
         token: this.token,
-        method: 'OffersInterfaceVersion.get',
+        method: 'SolutionUsesComponent.get',
         parameters: criteria
       },
       onResult,
@@ -130,7 +130,7 @@ export class OffersInterfaceVersionLogic {
       {
         apiVersion: 1,
         token: this.token,
-        method: 'OffersInterfaceVersion.count',
+        method: 'SolutionUsesComponent.count',
         parameters: criteria
       },
       onResult,
@@ -140,7 +140,7 @@ export class OffersInterfaceVersionLogic {
   }
 
   store(
-    offersInterfaceVersion?: Partial<OffersInterfaceVersion>,
+    SolutionUsesComponent?: Partial<SolutionUsesComponent>,
     onResult?: (result: ChangeResult) => void,
     onError?: (error: any) => void,
     requestParams?: RequestInit
@@ -150,8 +150,8 @@ export class OffersInterfaceVersionLogic {
       {
         apiVersion: 1,
         token: this.token,
-        method: 'OffersInterfaceVersion.store',
-        parameters: offersInterfaceVersion
+        method: 'SolutionUsesComponent.store',
+        parameters: SolutionUsesComponent
       },
       onResult,
       onError,
@@ -160,7 +160,7 @@ export class OffersInterfaceVersionLogic {
   }
 
   delete(
-    offersInterfaceVersion?: Partial<OffersInterfaceVersion>,
+    SolutionUsesComponent?: Partial<SolutionUsesComponent>,
     onResult?: (result: ChangeResult) => void,
     onError?: (error: any) => void,
     requestParams?: RequestInit
@@ -170,8 +170,8 @@ export class OffersInterfaceVersionLogic {
       {
         apiVersion: 1,
         token: this.token,
-        method: 'OffersInterfaceVersion.delete',
-        parameters: offersInterfaceVersion
+        method: 'SolutionUsesComponent.delete',
+        parameters: SolutionUsesComponent
       },
       onResult,
       onError,

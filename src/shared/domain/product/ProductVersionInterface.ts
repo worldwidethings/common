@@ -1,8 +1,8 @@
-import { OffersInterfaceVersionRight } from '../right/OffersInterfaceVersionRight'
+import { ProductVersionInterfaceRight } from '../right/ProductVersionInterfaceRight'
 import { InterfaceVersion } from './InterfaceVersion'
 import { ProductVersion } from './ProductVersion'
 
-export class OffersInterfaceVersion {
+export class ProductVersionInterface {
   id?: number
   creationDate?: Date
   description?: string
@@ -12,9 +12,9 @@ export class OffersInterfaceVersion {
 
   interfaceVersion?: InterfaceVersion
   productVersion?: ProductVersion
-  rights?: OffersInterfaceVersionRight[]
+  rights?: ProductVersionInterfaceRight[]
 
-  constructor(data?: Partial<OffersInterfaceVersion>) {
+  constructor(data?: Partial<ProductVersionInterface>) {
     Object.assign(this, data)
   }
 }

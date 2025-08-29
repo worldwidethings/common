@@ -1,13 +1,13 @@
 import { ChangeResult, CountResult, GetResult } from 'coderitter-api-rmc'
 import { type Criteria } from 'knight-criteria'
-import { ComponentPartOfSolution } from '../../../shared/domain/solution/ComponentPartOfSolution'
+import { ProductVersionInterface } from '../../../shared/domain/product/ProductVersionInterface'
 import { fetchHelper } from '../fetchHelper'
 
-export function getComponentPartOfSolutions(
+export function getProductVersionInterfaces(
   url: string | URL,
   token: string,
   criteria?: Criteria,
-  onResult?: (result: GetResult<ComponentPartOfSolution>) => void,
+  onResult?: (result: GetResult<ProductVersionInterface>) => void,
   onError?: (error: any) => void,
   requestParams?: RequestInit
 ): void {
@@ -16,7 +16,7 @@ export function getComponentPartOfSolutions(
     {
       apiVersion: 1,
       token: token,
-      method: 'ComponentPartOfSolution.get',
+      method: 'ProductVersionInterface.get',
       parameters: criteria
     },
     onResult,
@@ -25,7 +25,7 @@ export function getComponentPartOfSolutions(
   )
 }
 
-export function countComponentPartOfSolutions(
+export function countProductVersionInterfaces(
   url: string | URL,
   token: string,
   criteria?: Criteria,
@@ -38,7 +38,7 @@ export function countComponentPartOfSolutions(
     {
       apiVersion: 1,
       token: token,
-      method: 'ComponentPartOfSolution.count',
+      method: 'ProductVersionInterface.count',
       parameters: criteria
     },
     onResult,
@@ -47,10 +47,10 @@ export function countComponentPartOfSolutions(
   )
 }
 
-export function storeComponentPartOfSolution(
+export function storeProductVersionInterface(
   url: string | URL,
   token: string,
-  componentPartOfSolution?: Partial<ComponentPartOfSolution>,
+  ProductVersionInterface?: Partial<ProductVersionInterface>,
   onResult?: (result: ChangeResult) => void,
   onError?: (error: any) => void,
   requestParams?: RequestInit
@@ -60,8 +60,8 @@ export function storeComponentPartOfSolution(
     {
       apiVersion: 1,
       token: token,
-      method: 'ComponentPartOfSolution.store',
-      parameters: componentPartOfSolution
+      method: 'ProductVersionInterface.store',
+      parameters: ProductVersionInterface
     },
     onResult,
     onError,
@@ -69,10 +69,10 @@ export function storeComponentPartOfSolution(
   )
 }
 
-export function deleteComponentPartOfSolution(
+export function deleteProductVersionInterface(
   url: string | URL,
   token: string,
-  componentPartOfSolution?: Partial<ComponentPartOfSolution>,
+  ProductVersionInterface?: Partial<ProductVersionInterface>,
   onResult?: (result: ChangeResult) => void,
   onError?: (error: any) => void,
   requestParams?: RequestInit
@@ -82,8 +82,8 @@ export function deleteComponentPartOfSolution(
     {
       apiVersion: 1,
       token: token,
-      method: 'ComponentPartOfSolution.delete',
-      parameters: componentPartOfSolution
+      method: 'ProductVersionInterface.delete',
+      parameters: ProductVersionInterface
     },
     onResult,
     onError,
@@ -91,7 +91,7 @@ export function deleteComponentPartOfSolution(
   )
 }
 
-export class ComponentPartOfSolutionLogic {
+export class ProductVersionInterfaceLogic {
   url: string | URL
   token: string | undefined
   
@@ -101,7 +101,7 @@ export class ComponentPartOfSolutionLogic {
 
   get(
     criteria?: Criteria,
-    onResult?: (result: GetResult<ComponentPartOfSolution>) => void,
+    onResult?: (result: GetResult<ProductVersionInterface>) => void,
     onError?: (error: any) => void,
     requestParams?: RequestInit
   ): void {
@@ -110,7 +110,7 @@ export class ComponentPartOfSolutionLogic {
       {
         apiVersion: 1,
         token: this.token,
-        method: 'ComponentPartOfSolution.get',
+        method: 'ProductVersionInterface.get',
         parameters: criteria
       },
       onResult,
@@ -130,7 +130,7 @@ export class ComponentPartOfSolutionLogic {
       {
         apiVersion: 1,
         token: this.token,
-        method: 'ComponentPartOfSolution.count',
+        method: 'ProductVersionInterface.count',
         parameters: criteria
       },
       onResult,
@@ -140,7 +140,7 @@ export class ComponentPartOfSolutionLogic {
   }
 
   store(
-    componentPartOfSolution?: Partial<ComponentPartOfSolution>,
+    ProductVersionInterface?: Partial<ProductVersionInterface>,
     onResult?: (result: ChangeResult) => void,
     onError?: (error: any) => void,
     requestParams?: RequestInit
@@ -150,8 +150,8 @@ export class ComponentPartOfSolutionLogic {
       {
         apiVersion: 1,
         token: this.token,
-        method: 'ComponentPartOfSolution.store',
-        parameters: componentPartOfSolution
+        method: 'ProductVersionInterface.store',
+        parameters: ProductVersionInterface
       },
       onResult,
       onError,
@@ -160,7 +160,7 @@ export class ComponentPartOfSolutionLogic {
   }
 
   delete(
-    componentPartOfSolution?: Partial<ComponentPartOfSolution>,
+    ProductVersionInterface?: Partial<ProductVersionInterface>,
     onResult?: (result: ChangeResult) => void,
     onError?: (error: any) => void,
     requestParams?: RequestInit
@@ -170,8 +170,8 @@ export class ComponentPartOfSolutionLogic {
       {
         apiVersion: 1,
         token: this.token,
-        method: 'ComponentPartOfSolution.delete',
-        parameters: componentPartOfSolution
+        method: 'ProductVersionInterface.delete',
+        parameters: ProductVersionInterface
       },
       onResult,
       onError,
