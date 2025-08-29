@@ -1,6 +1,6 @@
+import { OffersInterfaceVersionRight } from '../right/OffersInterfaceVersionRight'
 import { InterfaceVersion } from './InterfaceVersion'
 import { ProductVersion } from './ProductVersion'
-import { OffersInterfaceVersionRight } from './rights/OffersInterfaceVersionRight'
 
 export class OffersInterfaceVersion {
   id?: number

@@ -1,6 +1,6 @@
 import { Organization } from '../organization/Organization'
+import { SolutionRight } from '../right/SolutionRight'
 import { ComponentPartOfSolution } from './ComponentPartOfSolution'
-import { SolutionRight } from './rights/SolutionRight'
 
 export class Solution {
   id?: number

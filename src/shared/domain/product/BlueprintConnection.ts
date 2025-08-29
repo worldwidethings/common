@@ -1,6 +1,6 @@
+import { BlueprintConnectionRight } from '../right/BlueprintConnectionRight'
 import { ConnectionPoint } from './ConnectionPoint'
 import { ProductVersion } from './ProductVersion'
-import { BlueprintConnectionRight } from './rights/BlueprintConnectionRight'
 import { SetupBlueprintVersion } from './SetupBlueprintVersion'
 
 /**

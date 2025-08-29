@@ -1,6 +1,6 @@
+import { SetupBlueprintVersionRight } from '../right/SetupBlueprintVersionRight'
 import { SetupVersion } from '../solution/SetupVersion'
 import { BlueprintConnection } from './BlueprintConnection'
-import { SetupBlueprintVersionRight } from './rights/SetupBlueprintVersionRight'
 import { SetupBlueprint } from './SetupBlueprint'
 
 /**

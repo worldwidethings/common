@@ -1,7 +1,7 @@
 import { SetupBlueprintVersion } from '../product/SetupBlueprintVersion'
+import { SetupVersionRight } from '../right/SetupVersionRight'
 import { Component } from './Component'
 import { Connection } from './Connection'
-import { SetupVersionRight } from './rights/SetupVersionRight'
 
 /**
  * This class is a specific version of a component setup, represented by the

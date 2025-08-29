@@ -1,6 +1,6 @@
 import { ConnectionPoint } from '../product/ConnectionPoint'
+import { ConnectionRight } from '../right/ConnectionRight'
 import { Component } from './Component'
-import { ConnectionRight } from './rights/ConnectionRight'
 import { SetupVersion } from './SetupVersion'
 
 /**

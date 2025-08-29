@@ -1,8 +1,7 @@
 import { ChangeResult, CountResult, GetResult, Result } from 'coderitter-api-rmc'
+import { UserCheckTokenResult, UserLoginResult } from './api/userApi'
 import { Organization } from './domain/organization/Organization'
-import { OrganizationRight } from './domain/organization/rights/OrganizationRight'
 import { User } from './domain/organization/User'
-import { UserGroup } from './domain/organization/UserGroup'
 import { BlueprintConnection } from './domain/product/BlueprintConnection'
 import { ConnectionPoint } from './domain/product/ConnectionPoint'
 import { Interface } from './domain/product/Interface'
@@ -11,25 +10,27 @@ import { OffersInterfaceVersion } from './domain/product/OffersInterfaceVersion'
 import { Product } from './domain/product/Product'
 import { ProductType } from './domain/product/ProductType'
 import { ProductVersion } from './domain/product/ProductVersion'
-import { BlueprintConnectionRight } from './domain/product/rights/BlueprintConnectionRight'
-import { ConnectionPointRight } from './domain/product/rights/ConnectionPointRight'
-import { InterfaceRight } from './domain/product/rights/InterfaceRight'
-import { InterfaceVersionRight } from './domain/product/rights/InterfaceVersionRight'
-import { OffersInterfaceVersionRight } from './domain/product/rights/OffersInterfaceVersionRight'
-import { ProductRight } from './domain/product/rights/ProductRight'
-import { ProductVersionRight } from './domain/product/rights/ProductVersionRight'
-import { SetupBlueprintRight } from './domain/product/rights/SetupBlueprintRight'
-import { SetupBlueprintVersionRight } from './domain/product/rights/SetupBlueprintVersionRight'
 import { SetupBlueprint } from './domain/product/SetupBlueprint'
 import { SetupBlueprintVersion } from './domain/product/SetupBlueprintVersion'
+import { BlueprintConnectionRight } from './domain/right/BlueprintConnectionRight'
+import { ComponentPartOfSolutionRight } from './domain/right/ComponentPartOfSolutionRight'
+import { ComponentRight } from './domain/right/ComponentRight'
+import { ConnectionPointRight } from './domain/right/ConnectionPointRight'
+import { ConnectionRight } from './domain/right/ConnectionRight'
+import { InterfaceRight } from './domain/right/InterfaceRight'
+import { InterfaceVersionRight } from './domain/right/InterfaceVersionRight'
+import { OffersInterfaceVersionRight } from './domain/right/OffersInterfaceVersionRight'
+import { OrganizationRight } from './domain/right/OrganizationRight'
+import { ProductRight } from './domain/right/ProductRight'
+import { ProductVersionRight } from './domain/right/ProductVersionRight'
+import { SetupBlueprintRight } from './domain/right/SetupBlueprintRight'
+import { SetupBlueprintVersionRight } from './domain/right/SetupBlueprintVersionRight'
+import { SetupVersionRight } from './domain/right/SetupVersionRight'
+import { SolutionRight } from './domain/right/SolutionRight'
+import { UserRight } from './domain/right/UserRight'
 import { Component } from './domain/solution/Component'
 import { ComponentPartOfSolution } from './domain/solution/ComponentPartOfSolution'
 import { Connection } from './domain/solution/Connection'
-import { ComponentPartOfSolutionRight } from './domain/solution/rights/ComponentPartOfSolutionRight'
-import { ComponentRight } from './domain/solution/rights/ComponentRight'
-import { ConnectionRight } from './domain/solution/rights/ConnectionRight'
-import { SetupVersionRight } from './domain/solution/rights/SetupVersionRight'
-import { SolutionRight } from './domain/solution/rights/SolutionRight'
 import { SetupVersion } from './domain/solution/SetupVersion'
 import { Solution } from './domain/solution/Solution'
 
@@ -38,6 +39,9 @@ export const instantiator = {
     ChangeResult: () => new ChangeResult,
     GetResult: () => new GetResult,
     CountResult: () => new CountResult,
+
+    UserSetPasswordParameters: () => new UserLoginResult,
+    UserCheckTokenResult: () => new UserCheckTokenResult,
 
     BlueprintConnection: () => new BlueprintConnection,
     BlueprintConnectionRight: () => new BlueprintConnectionRight,
@@ -71,5 +75,5 @@ export const instantiator = {
     Solution: () => new Solution,
     SolutionRight: () => new SolutionRight,
     User: () => new User,
-    UserGroup: () => new UserGroup
+    UserRight: () => new UserRight
 } as { [className: string]: () => any }

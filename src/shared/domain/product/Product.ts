@@ -1,7 +1,7 @@
 import { Organization } from '../organization/Organization'
+import { ProductRight } from '../right/ProductRight'
 import { ProductType } from './ProductType'
 import { ProductVersion } from './ProductVersion'
-import { ProductRight } from './rights/ProductRight'
 
 /**
  * A product can be either a hardware or a software product, i.e. devices,

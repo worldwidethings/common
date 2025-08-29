@@ -1,7 +1,7 @@
+import { ConnectionPointRight } from '../right/ConnectionPointRight'
 import { Connection } from '../solution/Connection'
 import { BlueprintConnection } from './BlueprintConnection'
 import { InterfaceVersion } from './InterfaceVersion'
-import { ConnectionPointRight } from './rights/ConnectionPointRight'
 
 /**
  * Every component can have a setup of other components it is somehow

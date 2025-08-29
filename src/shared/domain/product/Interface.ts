@@ -1,6 +1,6 @@
 import { Organization } from '../organization/Organization'
+import { InterfaceRight } from '../right/InterfaceRight'
 import { InterfaceVersion } from './InterfaceVersion'
-import { InterfaceRight } from './rights/InterfaceRight'
 
 export class Interface {
   id?: number

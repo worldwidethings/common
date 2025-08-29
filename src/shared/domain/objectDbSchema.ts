@@ -45,12 +45,6 @@ export const objectDbSchema = {
         thisId: 'userId',
         otherEntity: 'User',
         otherId: 'id'
-      },
-      'userGroup': {
-        manyToOne: true,
-        thisId: 'userGroupId',
-        otherEntity: 'UserGroup',
-        otherId: 'id'
       }
     }
   },
@@ -92,12 +86,6 @@ export const objectDbSchema = {
         manyToOne: true,
         thisId: 'userId',
         otherEntity: 'User',
-        otherId: 'id'
-      },
-      'userGroup': {
-        manyToOne: true,
-        thisId: 'userGroupId',
-        otherEntity: 'UserGroup',
         otherId: 'id'
       }
     }
@@ -165,12 +153,6 @@ export const objectDbSchema = {
         thisId: 'userId',
         otherEntity: 'User',
         otherId: 'id'
-      },
-      'userGroup': {
-        manyToOne: true,
-        thisId: 'userGroupId',
-        otherEntity: 'UserGroup',
-        otherId: 'id'
       }
     }
   },
@@ -225,12 +207,6 @@ export const objectDbSchema = {
         thisId: 'userId',
         otherEntity: 'User',
         otherId: 'id'
-      },
-      'userGroup': {
-        manyToOne: true,
-        thisId: 'userGroupId',
-        otherEntity: 'UserGroup',
-        otherId: 'id'
       }
     }
   },
@@ -279,12 +255,6 @@ export const objectDbSchema = {
         thisId: 'userId',
         otherEntity: 'User',
         otherId: 'id'
-      },
-      'userGroup': {
-        manyToOne: true,
-        thisId: 'userGroupId',
-        otherEntity: 'UserGroup',
-        otherId: 'id'
       }
     }
   },
@@ -326,12 +296,6 @@ export const objectDbSchema = {
         manyToOne: true,
         thisId: 'userId',
         otherEntity: 'User',
-        otherId: 'id'
-      },
-      'userGroup': {
-        manyToOne: true,
-        thisId: 'userGroupId',
-        otherEntity: 'UserGroup',
         otherId: 'id'
       }
     }
@@ -381,12 +345,6 @@ export const objectDbSchema = {
         thisId: 'userId',
         otherEntity: 'User',
         otherId: 'id'
-      },
-      'userGroup': {
-        manyToOne: true,
-        thisId: 'userGroupId',
-        otherEntity: 'UserGroup',
-        otherId: 'id'
       }
     }
   },
@@ -428,12 +386,6 @@ export const objectDbSchema = {
         manyToOne: true,
         thisId: 'userId',
         otherEntity: 'User',
-        otherId: 'id'
-      },
-      'userGroup': {
-        manyToOne: true,
-        thisId: 'userGroupId',
-        otherEntity: 'UserGroup',
         otherId: 'id'
       }
     }
@@ -495,12 +447,6 @@ export const objectDbSchema = {
         thisId: 'userId',
         otherEntity: 'User',
         otherId: 'id'
-      },
-      'userGroup': {
-        manyToOne: true,
-        thisId: 'userGroupId',
-        otherEntity: 'UserGroup',
-        otherId: 'id'
       }
     }
   },
@@ -548,12 +494,6 @@ export const objectDbSchema = {
         manyToOne: true,
         thisId: 'userId',
         otherEntity: 'User',
-        otherId: 'id'
-      },
-      'userGroup': {
-        manyToOne: true,
-        thisId: 'userGroupId',
-        otherEntity: 'UserGroup',
         otherId: 'id'
       }
     }
@@ -627,12 +567,6 @@ export const objectDbSchema = {
         thisId: 'userId',
         otherEntity: 'User',
         otherId: 'id'
-      },
-      'userGroup': {
-        manyToOne: true,
-        thisId: 'userGroupId',
-        otherEntity: 'UserGroup',
-        otherId: 'id'
       }
     }
   },
@@ -680,12 +614,6 @@ export const objectDbSchema = {
         manyToOne: true,
         thisId: 'userId',
         otherEntity: 'User',
-        otherId: 'id'
-      },
-      'userGroup': {
-        manyToOne: true,
-        thisId: 'userGroupId',
-        otherEntity: 'UserGroup',
         otherId: 'id'
       }
     }
@@ -735,12 +663,6 @@ export const objectDbSchema = {
         thisId: 'userId',
         otherEntity: 'User',
         otherId: 'id'
-      },
-      'userGroup': {
-        manyToOne: true,
-        thisId: 'userGroupId',
-        otherEntity: 'UserGroup',
-        otherId: 'id'
       }
     }
   },
@@ -789,12 +711,6 @@ export const objectDbSchema = {
         thisId: 'userId',
         otherEntity: 'User',
         otherId: 'id'
-      },
-      'userGroup': {
-        manyToOne: true,
-        thisId: 'userGroupId',
-        otherEntity: 'UserGroup',
-        otherId: 'id'
       }
     }
   },
@@ -836,12 +752,6 @@ export const objectDbSchema = {
         manyToOne: true,
         thisId: 'userId',
         otherEntity: 'User',
-        otherId: 'id'
-      },
-      'userGroup': {
-        manyToOne: true,
-        thisId: 'userGroupId',
-        otherEntity: 'UserGroup',
         otherId: 'id'
       }
     }
@@ -934,133 +844,30 @@ export const objectDbSchema = {
         otherEntity: 'SolutionRight',
         otherId: 'userId'
       },
-      userInGroups: {
+      userRights: {
         oneToMany: true,
         thisId: 'id',
-        otherEntity: 'UserInGroup',
+        otherEntity: 'UserRight',
         otherId: 'userId'
       }
     }
   },
 
-  'UserGroup': {
+  'UserRight': {
     idProps: [ 'id' ],
     relationships: {
-      blueprintConnectionRights: {
-        oneToMany: true,
-        thisId: 'id',
-        otherEntity: 'BlueprintConnectionRight',
-        otherId: 'userGroupId'
-      },
-      componentRights: {
-        oneToMany: true,
-        thisId: 'id',
-        otherEntity: 'ComponentRight',
-        otherId: 'userGroupId'
-      },
-      componentPartOfSolutionRights: {
-        oneToMany: true,
-        thisId: 'id',
-        otherEntity: 'ComponentPartOfSolutionRight',
-        otherId: 'userGroupId'
-      },
-      connectionPointRights: {
-        oneToMany: true,
-        thisId: 'id',
-        otherEntity: 'ConnectionPointRight',
-        otherId: 'userGroupId'
-      },
-      connectionRights: {
-        oneToMany: true,
-        thisId: 'id',
-        otherEntity: 'ConnectionRight',
-        otherId: 'userGroupId'
-      },
-      interfaceRights: {
-        oneToMany: true,
-        thisId: 'id',
-        otherEntity: 'InterfaceRight',
-        otherId: 'userGroupId'
-      },
-      offersInterfaceVersionRights: {
-        oneToMany: true,
-        thisId: 'id',
-        otherEntity: 'OffersInterfaceVersionRight',
-        otherId: 'userGroupId'
-      },
-      organization: {
-        manyToOne: true,
-        thisId: 'organizationId',
-        otherEntity: 'Organization',
-        otherId: 'id'
-      },
-      organizationRights: {
-        oneToMany: true,
-        thisId: 'id',
-        otherEntity: 'OrganizationRight',
-        otherId: 'userGroupId'
-      },
-      productRights: {
-        oneToMany: true,
-        thisId: 'id',
-        otherEntity: 'ProductRight',
-        otherId: 'userGroupId'
-      },
-      productVersionRights: {
-        oneToMany: true,
-        thisId: 'id',
-        otherEntity: 'ProductVersionRight',
-        otherId: 'userGroupId'
-      },
-      setupBlueprintRights: {
-        oneToMany: true,
-        thisId: 'id',
-        otherEntity: 'SetupBlueprintRight',
-        otherId: 'userGroupId'
-      },
-      setupBlueprintVersionRights: {
-        oneToMany: true,
-        thisId: 'id',
-        otherEntity: 'SetupBlueprintVersionRight',
-        otherId: 'userGroupId'
-      },
-      setupVersionRights: {
-        oneToMany: true,
-        thisId: 'id',
-        otherEntity: 'SetupVersionRight',
-        otherId: 'userGroupId'
-      },
-      solutionRights: {
-        oneToMany: true,
-        thisId: 'id',
-        otherEntity: 'SolutionRight',
-        otherId: 'userGroupId'
-      },
-      userInGroups: {
-        oneToMany: true,
-        thisId: 'id',
-        otherEntity: 'UserInGroup',
-        otherId: 'userGroupId'
-      }
-    }
-  },
-
-  'UserInGroup': {
-    idProps: [ 'id' ],
-    relationships: {
-      user: {
+      'user': {
         manyToOne: true,
         thisId: 'userId',
         otherEntity: 'User',
         otherId: 'id'
       },
-      userGroup: {
+      'userAdministered': {
         manyToOne: true,
-        thisId: 'userGroupId',
-        otherEntity: 'UserGroup',
+        thisId: 'userAdministeredId',
+        otherEntity: 'User',
         otherId: 'id'
       }
     }
   }
-
 } as Schema

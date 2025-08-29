@@ -1,18 +1,17 @@
 import { expect } from 'chai'
 import { checkSchema } from 'knight-object-db'
 import 'mocha'
-import { BlueprintConnection, Component, ComponentPartOfSolution, ComponentPartOfSolutionRight, ComponentRight, Connection, ConnectionPoint, ConnectionRight, Interface, InterfaceVersion, objectDbSchema, OffersInterfaceVersion, Organization, Product, ProductType, ProductVersion, SetupBlueprint, SetupBlueprintVersion, SetupVersion, SetupVersionRight, Solution, SolutionRight, User, UserGroup } from '../src'
-import { OrganizationRight } from '../src/shared/domain/organization/rights/OrganizationRight'
-import { UserInGroup } from '../src/shared/domain/organization/UserInGroup'
-import { BlueprintConnectionRight } from '../src/shared/domain/product/rights/BlueprintConnectionRight'
-import { ConnectionPointRight } from '../src/shared/domain/product/rights/ConnectionPointRight'
-import { InterfaceRight } from '../src/shared/domain/product/rights/InterfaceRight'
-import { InterfaceVersionRight } from '../src/shared/domain/product/rights/InterfaceVersionRight'
-import { OffersInterfaceVersionRight } from '../src/shared/domain/product/rights/OffersInterfaceVersionRight'
-import { ProductRight } from '../src/shared/domain/product/rights/ProductRight'
-import { ProductVersionRight } from '../src/shared/domain/product/rights/ProductVersionRight'
-import { SetupBlueprintRight } from '../src/shared/domain/product/rights/SetupBlueprintRight'
-import { SetupBlueprintVersionRight } from '../src/shared/domain/product/rights/SetupBlueprintVersionRight'
+import { BlueprintConnection, Component, ComponentPartOfSolution, ComponentPartOfSolutionRight, ComponentRight, Connection, ConnectionPoint, ConnectionRight, Interface, InterfaceVersion, objectDbSchema, OffersInterfaceVersion, Organization, Product, ProductType, ProductVersion, SetupBlueprint, SetupBlueprintVersion, SetupVersion, SetupVersionRight, Solution, SolutionRight, User, UserRight } from '../src'
+import { BlueprintConnectionRight } from '../src/shared/domain/right/BlueprintConnectionRight'
+import { ConnectionPointRight } from '../src/shared/domain/right/ConnectionPointRight'
+import { InterfaceRight } from '../src/shared/domain/right/InterfaceRight'
+import { InterfaceVersionRight } from '../src/shared/domain/right/InterfaceVersionRight'
+import { OffersInterfaceVersionRight } from '../src/shared/domain/right/OffersInterfaceVersionRight'
+import { OrganizationRight } from '../src/shared/domain/right/OrganizationRight'
+import { ProductRight } from '../src/shared/domain/right/ProductRight'
+import { ProductVersionRight } from '../src/shared/domain/right/ProductVersionRight'
+import { SetupBlueprintRight } from '../src/shared/domain/right/SetupBlueprintRight'
+import { SetupBlueprintVersionRight } from '../src/shared/domain/right/SetupBlueprintVersionRight'
 
 describe('ObjectDbSchema', function () {
   it('should be valid', function () {
@@ -32,10 +31,8 @@ describe('ObjectDbSchema', function () {
         id: 1,
         blueprintConnectionId: 1,
         userId: 1,
-        userGroupId: 1,
         blueprintConnection: {} as any,
-        user: {} as any,
-        userGroup: {} as any
+        user: {} as any
       }),
 
       new ComponentPartOfSolution({
@@ -51,10 +48,8 @@ describe('ObjectDbSchema', function () {
         id: 1,
         componentPartOfSolutionId: 1,
         userId: 1,
-        userGroupId: 1,
         componentPartOfSolution: {} as any,
-        user: {} as any,
-        userGroup: {} as any
+        user: {} as any
       }),
 
       new Component({
@@ -74,10 +69,8 @@ describe('ObjectDbSchema', function () {
         id: 1,
         componentId: 1,
         userId: 1,
-        userGroupId: 1,
         component: {} as any,
-        user: {} as any,
-        userGroup: {} as any
+        user: {} as any
       }),
 
       new Connection({
@@ -97,10 +90,8 @@ describe('ObjectDbSchema', function () {
         id: 1,
         connectionId: 1,
         userId: 1,
-        userGroupId: 1,
         connection: {} as any,
-        user: {} as any,
-        userGroup: {} as any
+        user: {} as any
       }),
 
       new ConnectionPoint({
@@ -116,10 +107,8 @@ describe('ObjectDbSchema', function () {
         id: 1,
         connectionPointId: 1,
         userId: 1,
-        userGroupId: 1,
         connectionPoint: {} as any,
-        user: {} as any,
-        userGroup: {} as any
+        user: {} as any
       }),
 
       new Interface({
@@ -133,10 +122,8 @@ describe('ObjectDbSchema', function () {
         id: 1,
         interfaceId: 1,
         userId: 1,
-        userGroupId: 1,
         interface: {} as any,
-        user: {} as any,
-        userGroup: {} as any
+        user: {} as any
       }),
 
       new InterfaceVersion({
@@ -152,10 +139,8 @@ describe('ObjectDbSchema', function () {
         id: 1,
         interfaceVersionId: 1,
         userId: 1,
-        userGroupId: 1,
         interfaceVersion: {} as any,
-        user: {} as any,
-        userGroup: {} as any
+        user: {} as any
       }),
 
       new OffersInterfaceVersion({
@@ -171,10 +156,8 @@ describe('ObjectDbSchema', function () {
         id: 1,
         offersInterfaceVersionId: 1,
         userId: 1,
-        userGroupId: 1,
         offersInterfaceVersion: {} as any,
-        user: {} as any,
-        userGroup: {} as any
+        user: {} as any
       }),
 
       new Organization({
@@ -191,10 +174,8 @@ describe('ObjectDbSchema', function () {
         id: 1,
         organizationId: 1,
         userId: 1,
-        userGroupId: 1,
         organization: {} as any,
-        user: {} as any,
-        userGroup: {} as any
+        user: {} as any
       }),
 
       new Product({
@@ -211,10 +192,8 @@ describe('ObjectDbSchema', function () {
         id: 1,
         productId: 1,
         userId: 1,
-        userGroupId: 1,
         product: {} as any,
-        user: {} as any,
-        userGroup: {} as any
+        user: {} as any
       }),
 
       new ProductType({
@@ -237,10 +216,8 @@ describe('ObjectDbSchema', function () {
         id: 1,
         productVersionId: 1,
         userId: 1,
-        userGroupId: 1,
         productVersion: {} as any,
-        user: {} as any,
-        userGroup: {} as any
+        user: {} as any
       }),
 
       new SetupBlueprint({
@@ -257,10 +234,8 @@ describe('ObjectDbSchema', function () {
         id: 1,
         setupBlueprintId: 1,
         userId: 1,
-        userGroupId: 1,
         setupBlueprint: {} as any,
-        user: {} as any,
-        userGroup: {} as any
+        user: {} as any
       }),
 
       new SetupBlueprintVersion({
@@ -276,10 +251,8 @@ describe('ObjectDbSchema', function () {
         id: 1,
         setupBlueprintVersionId: 1,
         userId: 1,
-        userGroupId: 1,
         setupBlueprintVersion: {} as any,
-        user: {} as any,
-        userGroup: {} as any
+        user: {} as any
       }),
 
       new SetupVersion({
@@ -296,10 +269,8 @@ describe('ObjectDbSchema', function () {
         id: 1,
         setupVersionId: 1,
         userId: 1,
-        userGroupId: 1,
         setupVersion: {} as any,
-        user: {} as any,
-        userGroup: {} as any
+        user: {} as any
       }),
 
       new Solution({
@@ -314,10 +285,8 @@ describe('ObjectDbSchema', function () {
         id: 1,
         solutionId: 1,
         userId: 1,
-        userGroupId: 1,
         solution: {} as any,
-        user: {} as any,
-        userGroup: {} as any
+        user: {} as any
       }),
 
       new User({
@@ -336,73 +305,52 @@ describe('ObjectDbSchema', function () {
         setupBlueprintVersionRights: [],
         setupVersionRights: [],
         solutionRights: [],
-        userInGroups: []
+        userRights: []
       }),
 
-      new UserGroup({
-        id: 1,
-        organizationId: 1,
-        blueprintConnectionRights: [],
-        componentRights: [],
-        componentPartOfSolutionRights: [],
-        connectionPointRights: [],
-        connectionRights: [],
-        interfaceRights: [],
-        offersInterfaceVersionRights: [],
-        organization: {} as any,
-        organizationRights: [],
-        productRights: [],
-        productVersionRights: [],
-        setupBlueprintRights: [],
-        setupBlueprintVersionRights: [],
-        setupVersionRights: [],
-        solutionRights: [],
-        userInGroups: []
-      }),
-
-      new UserInGroup({
+      new UserRight({
         id: 1,
         userId: 1,
-        userGroupId: 1,
+        userAdministeredId: 1,
         user: {} as any,
-        userGroup: {} as any
+        userAdministered: {} as any
       })
     ])
 
     expect(issues).to.deep.equal([
       'BlueprintConnection: The given reference objects defines further properties which were not mentioned in the schema: creationDate, description',
-      'BlueprintConnectionRight: The given reference objects defines further properties which were not mentioned in the schema: view, change, admin, owner',
+      'BlueprintConnectionRight: The given reference objects defines further properties which were not mentioned in the schema: admin, developer, maintainer, reporter',
       'ComponentPartOfSolution: The given reference objects defines further properties which were not mentioned in the schema: creationDate, description',
-      'ComponentPartOfSolutionRight: The given reference objects defines further properties which were not mentioned in the schema: view, change, admin, owner',
+      'ComponentPartOfSolutionRight: The given reference objects defines further properties which were not mentioned in the schema: admin, developer, maintainer, reporter',
       'Component: The given reference objects defines further properties which were not mentioned in the schema: creationDate, description, name',
-      'ComponentRight: The given reference objects defines further properties which were not mentioned in the schema: view, change, admin, owner',
+      'ComponentRight: The given reference objects defines further properties which were not mentioned in the schema: admin, developer, maintainer, reporter',
       'Connection: The given reference objects defines further properties which were not mentioned in the schema: creationDate, description, latestSetupVersion',
-      'ConnectionRight: The given reference objects defines further properties which were not mentioned in the schema: view, change, admin, owner',
+      'ConnectionRight: The given reference objects defines further properties which were not mentioned in the schema: admin, developer, maintainer, reporter',
       'ConnectionPoint: The given reference objects defines further properties which were not mentioned in the schema: creationDate, description, name',
-      'ConnectionPointRight: The given reference objects defines further properties which were not mentioned in the schema: view, change, admin, owner',
+      'ConnectionPointRight: The given reference objects defines further properties which were not mentioned in the schema: admin, developer, maintainer, reporter',
       'Interface: The given reference objects defines further properties which were not mentioned in the schema: creationDate, description, name',
-      'InterfaceRight: The given reference objects defines further properties which were not mentioned in the schema: view, change, admin, owner',
+      'InterfaceRight: The given reference objects defines further properties which were not mentioned in the schema: admin, developer, maintainer, reporter',
       'InterfaceVersion: The given reference objects defines further properties which were not mentioned in the schema: creationDate, description, name, version',
-      'InterfaceVersionRight: The given reference objects defines further properties which were not mentioned in the schema: view, change, admin, owner',
+      'InterfaceVersionRight: The given reference objects defines further properties which were not mentioned in the schema: admin, developer, maintainer, reporter',
       'OffersInterfaceVersion: The given reference objects defines further properties which were not mentioned in the schema: creationDate, description',
-      'OffersInterfaceVersionRight: The given reference objects defines further properties which were not mentioned in the schema: view, change, admin, owner',
+      'OffersInterfaceVersionRight: The given reference objects defines further properties which were not mentioned in the schema: admin, developer, maintainer, reporter',
       'Organization: The given reference objects defines further properties which were not mentioned in the schema: creationDate, description, name',
-      'OrganizationRight: The given reference objects defines further properties which were not mentioned in the schema: view, change, admin, owner',
+      'OrganizationRight: The given reference objects defines further properties which were not mentioned in the schema: owner, admin',
       'Product: The given reference objects defines further properties which were not mentioned in the schema: creationDate, description, name',
-      'ProductRight: The given reference objects defines further properties which were not mentioned in the schema: view, change, admin, owner',
+      'ProductRight: The given reference objects defines further properties which were not mentioned in the schema: admin, developer, maintainer, reporter',
       'ProductType: The given reference objects defines further properties which were not mentioned in the schema: description, name',
       'ProductVersion: The given reference objects defines further properties which were not mentioned in the schema: creationDate, description, name, version',
-      'ProductVersionRight: The given reference objects defines further properties which were not mentioned in the schema: view, change, admin, owner',
+      'ProductVersionRight: The given reference objects defines further properties which were not mentioned in the schema: admin, developer, maintainer, reporter',
       'SetupBlueprint: The given reference objects defines further properties which were not mentioned in the schema: creationDate, description, name',
-      'SetupBlueprintRight: The given reference objects defines further properties which were not mentioned in the schema: view, change, admin, owner',
+      'SetupBlueprintRight: The given reference objects defines further properties which were not mentioned in the schema: admin, developer, maintainer, reporter',
       'SetupBlueprintVersion: The given reference objects defines further properties which were not mentioned in the schema: version, creationDate, description, name',
-      'SetupBlueprintVersionRight: The given reference objects defines further properties which were not mentioned in the schema: view, change, admin, owner',
+      'SetupBlueprintVersionRight: The given reference objects defines further properties which were not mentioned in the schema: admin, developer, maintainer, reporter',
       'SetupVersion: The given reference objects defines further properties which were not mentioned in the schema: version, creationDate, description, name',
-      'SetupVersionRight: The given reference objects defines further properties which were not mentioned in the schema: view, change, admin, owner',
+      'SetupVersionRight: The given reference objects defines further properties which were not mentioned in the schema: admin, developer, maintainer, reporter',
       'Solution: The given reference objects defines further properties which were not mentioned in the schema: color, creationDate, description, name',
-      'SolutionRight: The given reference objects defines further properties which were not mentioned in the schema: view, change, admin, owner',
+      'SolutionRight: The given reference objects defines further properties which were not mentioned in the schema: admin, developer, maintainer, reporter',
       'User: The given reference objects defines further properties which were not mentioned in the schema: active, creationDate, email, firstName, lastName, passwordHash, passwordResetToken, passwordResetTokenCreationDate, registerToken, registerTokenCreationDate, salt, token',
-      'UserGroup: The given reference objects defines further properties which were not mentioned in the schema: name, description'
+      'UserRight: The given reference objects defines further properties which were not mentioned in the schema: admin'
       ], '\n' + issues.join('\n') + '\n')
   })
 })

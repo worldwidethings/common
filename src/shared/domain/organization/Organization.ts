@@ -1,8 +1,8 @@
 import { Product } from '../product/Product'
 import { SetupBlueprint } from '../product/SetupBlueprint'
+import { OrganizationRight } from '../right/OrganizationRight'
 import { Component } from '../solution/Component'
 import { Solution } from '../solution/Solution'
-import { OrganizationRight } from './rights/OrganizationRight'
 
 export class Organization {
   id?: number

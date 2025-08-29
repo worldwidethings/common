@@ -1,6 +1,6 @@
 import { Organization } from '../organization/Organization'
+import { SetupBlueprintRight } from '../right/SetupBlueprintRight'
 import { ProductVersion } from './ProductVersion'
-import { SetupBlueprintRight } from './rights/SetupBlueprintRight'
 import { SetupBlueprintVersion } from './SetupBlueprintVersion'
 
 /**

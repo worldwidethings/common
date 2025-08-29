@@ -1,18 +1,18 @@
-import { BlueprintConnectionRight } from '../product/rights/BlueprintConnectionRight'
-import { ConnectionPointRight } from '../product/rights/ConnectionPointRight'
-import { InterfaceRight } from '../product/rights/InterfaceRight'
-import { OffersInterfaceVersionRight } from '../product/rights/OffersInterfaceVersionRight'
-import { ProductRight } from '../product/rights/ProductRight'
-import { ProductVersionRight } from '../product/rights/ProductVersionRight'
-import { SetupBlueprintRight } from '../product/rights/SetupBlueprintRight'
-import { SetupBlueprintVersionRight } from '../product/rights/SetupBlueprintVersionRight'
-import { ComponentPartOfSolutionRight } from '../solution/rights/ComponentPartOfSolutionRight'
-import { ComponentRight } from '../solution/rights/ComponentRight'
-import { ConnectionRight } from '../solution/rights/ConnectionRight'
-import { SetupVersionRight } from '../solution/rights/SetupVersionRight'
-import { SolutionRight } from '../solution/rights/SolutionRight'
-import { OrganizationRight } from './rights/OrganizationRight'
-import { UserInGroup } from './UserInGroup'
+import { BlueprintConnectionRight } from '../right/BlueprintConnectionRight'
+import { ComponentPartOfSolutionRight } from '../right/ComponentPartOfSolutionRight'
+import { ComponentRight } from '../right/ComponentRight'
+import { ConnectionPointRight } from '../right/ConnectionPointRight'
+import { ConnectionRight } from '../right/ConnectionRight'
+import { InterfaceRight } from '../right/InterfaceRight'
+import { OffersInterfaceVersionRight } from '../right/OffersInterfaceVersionRight'
+import { OrganizationRight } from '../right/OrganizationRight'
+import { ProductRight } from '../right/ProductRight'
+import { ProductVersionRight } from '../right/ProductVersionRight'
+import { SetupBlueprintRight } from '../right/SetupBlueprintRight'
+import { SetupBlueprintVersionRight } from '../right/SetupBlueprintVersionRight'
+import { SetupVersionRight } from '../right/SetupVersionRight'
+import { SolutionRight } from '../right/SolutionRight'
+import { UserRight } from '../right/UserRight'
 
 export class User {
   id?: number
@@ -44,8 +44,8 @@ export class User {
   setupBlueprintVersionRights?: SetupBlueprintVersionRight[]
   setupVersionRights?: SetupVersionRight[]
   solutionRights?: SolutionRight[]
-  userInGroups?: UserInGroup[]
-
+  userRights?: UserRight[]
+  
   constructor(data?: Partial<User>) {
     Object.assign(this, data)
   }

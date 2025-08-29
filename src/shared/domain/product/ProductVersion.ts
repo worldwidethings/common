@@ -1,9 +1,9 @@
+import { ProductVersionRight } from '../right/ProductVersionRight'
 import { Component } from '../solution/Component'
 import { BlueprintConnection } from './BlueprintConnection'
 import { ConnectionPoint } from './ConnectionPoint'
 import { OffersInterfaceVersion } from './OffersInterfaceVersion'
 import { Product } from './Product'
-import { ProductVersionRight } from './rights/ProductVersionRight'
 import { SetupBlueprint } from './SetupBlueprint'
 
 /**

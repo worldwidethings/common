@@ -1,7 +1,7 @@
+import { InterfaceVersionRight } from '../right/InterfaceVersionRight'
 import { ConnectionPoint } from './ConnectionPoint'
 import { Interface } from './Interface'
 import { OffersInterfaceVersion } from './OffersInterfaceVersion'
-import { InterfaceVersionRight } from './rights/InterfaceVersionRight'
 
 /**
  * IoT components can be connected to other IoT components, either to form a

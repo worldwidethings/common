@@ -1,8 +1,8 @@
 import { Organization } from '../organization/Organization'
 import { ProductVersion } from '../product/ProductVersion'
+import { ComponentRight } from '../right/ComponentRight'
 import { ComponentPartOfSolution } from './ComponentPartOfSolution'
 import { Connection } from './Connection'
-import { ComponentRight } from './rights/ComponentRight'
 import { SetupVersion } from './SetupVersion'
 
 /**

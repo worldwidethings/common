@@ -1,5 +1,5 @@
+import { ComponentPartOfSolutionRight } from '../right/ComponentPartOfSolutionRight'
 import { Component } from './Component'
-import { ComponentPartOfSolutionRight } from './rights/ComponentPartOfSolutionRight'
 import { Solution } from './Solution'
 
 export class ComponentPartOfSolution {
