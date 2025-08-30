@@ -165,7 +165,8 @@ describe('ObjectDbSchema', function () {
         product: {} as any,
         productVersionInterfaces: [],
         rights: [],
-        setupBlueprints: []
+        setupBlueprints: [],
+        solutionUsesProductVersions: []
       }),
 
       new ProductVersionRight({
@@ -200,7 +201,8 @@ describe('ObjectDbSchema', function () {
         organization: {} as any,
         productVersion: {} as any,
         rights: [],
-        setupBlueprintVersions: []
+        setupBlueprintVersions: [],
+        solutionUsesSetupBlueprints: []
       }),
 
       new SetupBlueprintRight({
@@ -251,7 +253,9 @@ describe('ObjectDbSchema', function () {
         organizationId: 1,
         organization: {} as any,
         rights: [],
-        solutionUsesComponents: []
+        solutionUsesComponents: [],
+        solutionUsesProductVersions: [],
+        solutionUsesSetupBlueprints: []
       }),
 
       new SolutionRight({

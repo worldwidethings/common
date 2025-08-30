@@ -507,6 +507,12 @@ export const objectDbSchema = {
          thisId: 'id',
          otherEntity: 'SetupBlueprint',
          otherId: 'productVersionId'
+      },
+      'solutionUsesProductVersions': {
+         oneToMany: true,
+         thisId: 'id',
+         otherEntity: 'SolutionUsesProductVersion',
+         otherId: 'productVersionId'
       }
     }
   },
@@ -554,6 +560,12 @@ export const objectDbSchema = {
          oneToMany: true,
          thisId: 'id',
          otherEntity: 'SetupBlueprintVersion',
+         otherId: 'setupBlueprintId'
+      },
+      'solutionUsesSetupBlueprints': {
+         oneToMany: true,
+         thisId: 'id',
+         otherEntity: 'SolutionUsesSetupBlueprint',
          otherId: 'setupBlueprintId'
       }
     }
@@ -692,6 +704,18 @@ export const objectDbSchema = {
         oneToMany: true,
         thisId: 'id',
         otherEntity: 'SolutionUsesComponent',
+        otherId: 'solutionId'
+      },
+      'solutionUsesProductVersions': {
+        oneToMany: true,
+        thisId: 'id',
+        otherEntity: 'SolutionUsesProductVersion',
+        otherId: 'solutionId'
+      },
+      'solutionUsesSetupBlueprints': {
+        oneToMany: true,
+        thisId: 'id',
+        otherEntity: 'SolutionUsesSetupBlueprint',
         otherId: 'solutionId'
       }
     }

@@ -1,6 +1,7 @@
 import { Entity } from '../Entity'
 import { Organization } from '../organization/Organization'
 import { SetupBlueprintRight } from '../right/SetupBlueprintRight'
+import { SolutionUsesSetupBlueprint } from '../solution/SolutionUsesSetupBlueprint'
 import { ProductVersion } from './ProductVersion'
 import { SetupBlueprintVersion } from './SetupBlueprintVersion'
 
@@ -26,6 +27,7 @@ export class SetupBlueprint extends Entity{
   productVersion?: ProductVersion
   rights?: SetupBlueprintRight[]
   setupBlueprintVersions?: SetupBlueprintVersion[]
+  solutionUsesSetupBlueprints?: SolutionUsesSetupBlueprint[]
 
   constructor(data?: Partial<SetupBlueprint>) {
     super()

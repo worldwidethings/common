@@ -1,11 +1,12 @@
+import { Entity } from '../Entity'
 import { ProductVersionRight } from '../right/ProductVersionRight'
 import { Component } from '../solution/Component'
+import { SolutionUsesProductVersion } from '../solution/SolutionUsesProductVersion'
 import { BlueprintConnection } from './BlueprintConnection'
 import { ConnectionPoint } from './ConnectionPoint'
-import { ProductVersionInterface } from './ProductVersionInterface'
 import { Product } from './Product'
+import { ProductVersionInterface } from './ProductVersionInterface'
 import { SetupBlueprint } from './SetupBlueprint'
-import { Entity } from '../Entity'
 
 /**
  * Products can evolve in versions. This is not so often found with hardware
@@ -39,6 +40,7 @@ export class ProductVersion extends Entity {
   productVersionInterfaces?: ProductVersionInterface[]
   rights?: ProductVersionRight[]
   setupBlueprints?: SetupBlueprint[]
+  solutionUsesProductVersions?: SolutionUsesProductVersion[]
 
   constructor(data?: Partial<ProductVersion>) {
     super()
