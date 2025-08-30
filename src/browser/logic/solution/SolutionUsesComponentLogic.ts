@@ -9,7 +9,7 @@ export function getSolutionUsesComponents(
   criteria?: Criteria,
   onResult?: (result: GetResult<SolutionUsesComponent>) => void,
   onError?: (error: any) => void,
-  requestParams?: RequestInit
+  requestParams?: Criteria
 ): void {
   fetchHelper(
     url,
@@ -31,7 +31,7 @@ export function countSolutionUsesComponents(
   criteria?: Criteria,
   onResult?: (result: CountResult) => void,
   onError?: (error: any) => void,
-  requestParams?: RequestInit
+  requestParams?: Criteria
 ): void {
   fetchHelper(
     url,
@@ -53,7 +53,7 @@ export function storeSolutionUsesComponent(
   SolutionUsesComponent?: Partial<SolutionUsesComponent>,
   onResult?: (result: ChangeResult) => void,
   onError?: (error: any) => void,
-  requestParams?: RequestInit
+  requestParams?: Criteria
 ): void {
   fetchHelper(
     url,
@@ -75,7 +75,7 @@ export function deleteSolutionUsesComponent(
   SolutionUsesComponent?: Partial<SolutionUsesComponent>,
   onResult?: (result: ChangeResult) => void,
   onError?: (error: any) => void,
-  requestParams?: RequestInit
+  requestParams?: Criteria
 ): void {
   fetchHelper(
     url,
@@ -103,7 +103,7 @@ export class SolutionUsesComponentLogic {
     criteria?: Criteria,
     onResult?: (result: GetResult<SolutionUsesComponent>) => void,
     onError?: (error: any) => void,
-    requestParams?: RequestInit
+    requestParams?: Criteria
   ): void {
     fetchHelper(
       this.url,
@@ -123,7 +123,7 @@ export class SolutionUsesComponentLogic {
     criteria?: Criteria,
     onResult?: (result: CountResult) => void,
     onError?: (error: any) => void,
-    requestParams?: RequestInit
+    requestParams?: Criteria
   ): void {
     fetchHelper(
       this.url,
@@ -143,7 +143,7 @@ export class SolutionUsesComponentLogic {
     SolutionUsesComponent?: Partial<SolutionUsesComponent>,
     onResult?: (result: ChangeResult) => void,
     onError?: (error: any) => void,
-    requestParams?: RequestInit
+    requestParams?: Criteria
   ): void {
     fetchHelper(
       this.url,
@@ -163,7 +163,7 @@ export class SolutionUsesComponentLogic {
     SolutionUsesComponent?: Partial<SolutionUsesComponent>,
     onResult?: (result: ChangeResult) => void,
     onError?: (error: any) => void,
-    requestParams?: RequestInit
+    requestParams?: Criteria
   ): void {
     fetchHelper(
       this.url,

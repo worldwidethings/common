@@ -9,7 +9,7 @@ export function getOrganizations(
   criteria?: Criteria,
   onResult?: (result: GetResult<Organization>) => void,
   onError?: (error: any) => void,
-  requestParams?: RequestInit
+  requestParams?: Criteria
 ): void {
   fetchHelper(
     url,
@@ -31,7 +31,7 @@ export function countOrganizations(
   criteria?: Criteria,
   onResult?: (result: CountResult) => void,
   onError?: (error: any) => void,
-  requestParams?: RequestInit
+  requestParams?: Criteria
 ): void {
   fetchHelper(
     url,
@@ -53,7 +53,7 @@ export function storeOrganization(
   organization?: Partial<Organization>,
   onResult?: (result: ChangeResult) => void,
   onError?: (error: any) => void,
-  requestParams?: RequestInit
+  requestParams?: Criteria
 ): void {
   fetchHelper(
     url,
@@ -75,7 +75,7 @@ export function deleteOrganization(
   organization?: Partial<Organization>,
   onResult?: (result: ChangeResult) => void,
   onError?: (error: any) => void,
-  requestParams?: RequestInit
+  requestParams?: Criteria
 ): void {
   fetchHelper(
     url,
@@ -103,7 +103,7 @@ export class OrganizationLogic {
     criteria?: Criteria,
     onResult?: (result: GetResult<Organization>) => void,
     onError?: (error: any) => void,
-    requestParams?: RequestInit
+    requestParams?: Criteria
   ): void {
     fetchHelper(
       this.url,
@@ -123,7 +123,7 @@ export class OrganizationLogic {
     criteria?: Criteria,
     onResult?: (result: CountResult) => void,
     onError?: (error: any) => void,
-    requestParams?: RequestInit
+    requestParams?: Criteria
   ): void {
     fetchHelper(
       this.url,
@@ -143,7 +143,7 @@ export class OrganizationLogic {
     organization?: Partial<Organization>,
     onResult?: (result: ChangeResult) => void,
     onError?: (error: any) => void,
-    requestParams?: RequestInit
+    requestParams?: Criteria
   ): void {
     fetchHelper(
       this.url,
@@ -163,7 +163,7 @@ export class OrganizationLogic {
     organization?: Partial<Organization>,
     onResult?: (result: ChangeResult) => void,
     onError?: (error: any) => void,
-    requestParams?: RequestInit
+    requestParams?: Criteria
   ): void {
     fetchHelper(
       this.url,

@@ -9,7 +9,7 @@ export function getInterfaceVersions(
   criteria?: Criteria,
   onResult?: (result: GetResult<InterfaceVersion>) => void,
   onError?: (error: any) => void,
-  requestParams?: RequestInit
+  requestParams?: Criteria
 ): void {
   fetchHelper(
     url,
@@ -31,7 +31,7 @@ export function countInterfaceVersions(
   criteria?: Criteria,
   onResult?: (result: CountResult) => void,
   onError?: (error: any) => void,
-  requestParams?: RequestInit
+  requestParams?: Criteria
 ): void {
   fetchHelper(
     url,
@@ -53,7 +53,7 @@ export function storeInterfaceVersion(
   interfaceVersion?: Partial<InterfaceVersion>,
   onResult?: (result: ChangeResult) => void,
   onError?: (error: any) => void,
-  requestParams?: RequestInit
+  requestParams?: Criteria
 ): void {
   fetchHelper(
     url,
@@ -75,7 +75,7 @@ export function deleteInterfaceVersion(
   interfaceVersion?: Partial<InterfaceVersion>,
   onResult?: (result: ChangeResult) => void,
   onError?: (error: any) => void,
-  requestParams?: RequestInit
+  requestParams?: Criteria
 ): void {
   fetchHelper(
     url,
@@ -103,7 +103,7 @@ export class InterfaceVersionLogic {
     criteria?: Criteria,
     onResult?: (result: GetResult<InterfaceVersion>) => void,
     onError?: (error: any) => void,
-    requestParams?: RequestInit
+    requestParams?: Criteria
   ): void {
     fetchHelper(
       this.url,
@@ -123,7 +123,7 @@ export class InterfaceVersionLogic {
     criteria?: Criteria,
     onResult?: (result: CountResult) => void,
     onError?: (error: any) => void,
-    requestParams?: RequestInit
+    requestParams?: Criteria
   ): void {
     fetchHelper(
       this.url,
@@ -143,7 +143,7 @@ export class InterfaceVersionLogic {
     interfaceVersion?: Partial<InterfaceVersion>,
     onResult?: (result: ChangeResult) => void,
     onError?: (error: any) => void,
-    requestParams?: RequestInit
+    requestParams?: Criteria
   ): void {
     fetchHelper(
       this.url,
@@ -163,7 +163,7 @@ export class InterfaceVersionLogic {
     interfaceVersion?: Partial<InterfaceVersion>,
     onResult?: (result: ChangeResult) => void,
     onError?: (error: any) => void,
-    requestParams?: RequestInit
+    requestParams?: Criteria
   ): void {
     fetchHelper(
       this.url,

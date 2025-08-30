@@ -9,7 +9,7 @@ export function getSetupVersionRights(
   criteria?: Criteria,
   onResult?: (result: GetResult<SetupVersionRight>) => void,
   onError?: (error: any) => void,
-  requestParams?: RequestInit
+  requestParams?: Criteria
 ): void {
   fetchHelper(
     url,
@@ -31,7 +31,7 @@ export function countSetupVersionRights(
   criteria?: Criteria,
   onResult?: (result: CountResult) => void,
   onError?: (error: any) => void,
-  requestParams?: RequestInit
+  requestParams?: Criteria
 ): void {
   fetchHelper(
     url,
@@ -59,7 +59,7 @@ export class SetupVersionRightLogic {
     criteria?: Criteria,
     onResult?: (result: GetResult<SetupVersionRight>) => void,
     onError?: (error: any) => void,
-    requestParams?: RequestInit
+    requestParams?: Criteria
   ): void {
     fetchHelper(
       this.url,
@@ -79,7 +79,7 @@ export class SetupVersionRightLogic {
     criteria?: Criteria,
     onResult?: (result: CountResult) => void,
     onError?: (error: any) => void,
-    requestParams?: RequestInit
+    requestParams?: Criteria
   ): void {
     fetchHelper(
       this.url,

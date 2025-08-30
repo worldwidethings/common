@@ -9,7 +9,7 @@ export function getConnections(
   criteria?: Criteria,
   onResult?: (result: GetResult<Connection>) => void,
   onError?: (error: any) => void,
-  requestParams?: RequestInit
+  requestParams?: Criteria
 ): void {
   fetchHelper(
     url,
@@ -31,7 +31,7 @@ export function countConnections(
   criteria?: Criteria,
   onResult?: (result: CountResult) => void,
   onError?: (error: any) => void,
-  requestParams?: RequestInit
+  requestParams?: Criteria
 ): void {
   fetchHelper(
     url,
@@ -53,7 +53,7 @@ export function storeConnection(
   connection?: Partial<Connection>,
   onResult?: (result: ChangeResult) => void,
   onError?: (error: any) => void,
-  requestParams?: RequestInit
+  requestParams?: Criteria
 ): void {
   fetchHelper(
     url,
@@ -75,7 +75,7 @@ export function deleteConnection(
   connection?: Partial<Connection>,
   onResult?: (result: ChangeResult) => void,
   onError?: (error: any) => void,
-  requestParams?: RequestInit
+  requestParams?: Criteria
 ): void {
   fetchHelper(
     url,
@@ -103,7 +103,7 @@ export class ConnectionLogic {
     criteria?: Criteria,
     onResult?: (result: GetResult<Connection>) => void,
     onError?: (error: any) => void,
-    requestParams?: RequestInit
+    requestParams?: Criteria
   ): void {
     fetchHelper(
       this.url,
@@ -123,7 +123,7 @@ export class ConnectionLogic {
     criteria?: Criteria,
     onResult?: (result: CountResult) => void,
     onError?: (error: any) => void,
-    requestParams?: RequestInit
+    requestParams?: Criteria
   ): void {
     fetchHelper(
       this.url,
@@ -143,7 +143,7 @@ export class ConnectionLogic {
     connection?: Partial<Connection>,
     onResult?: (result: ChangeResult) => void,
     onError?: (error: any) => void,
-    requestParams?: RequestInit
+    requestParams?: Criteria
   ): void {
     fetchHelper(
       this.url,
@@ -163,7 +163,7 @@ export class ConnectionLogic {
     connection?: Partial<Connection>,
     onResult?: (result: ChangeResult) => void,
     onError?: (error: any) => void,
-    requestParams?: RequestInit
+    requestParams?: Criteria
   ): void {
     fetchHelper(
       this.url,

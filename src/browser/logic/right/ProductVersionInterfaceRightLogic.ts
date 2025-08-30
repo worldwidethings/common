@@ -9,7 +9,7 @@ export function getProductVersionInterfaceRights(
   criteria?: Criteria,
   onResult?: (result: GetResult<ProductVersionInterfaceRight>) => void,
   onError?: (error: any) => void,
-  requestParams?: RequestInit
+  requestParams?: Criteria
 ): void {
   fetchHelper(
     url,
@@ -31,7 +31,7 @@ export function countProductVersionInterfaceRights(
   criteria?: Criteria,
   onResult?: (result: CountResult) => void,
   onError?: (error: any) => void,
-  requestParams?: RequestInit
+  requestParams?: Criteria
 ): void {
   fetchHelper(
     url,
@@ -59,7 +59,7 @@ export class ProductVersionInterfaceRightLogic {
     criteria?: Criteria,
     onResult?: (result: GetResult<ProductVersionInterfaceRight>) => void,
     onError?: (error: any) => void,
-    requestParams?: RequestInit
+    requestParams?: Criteria
   ): void {
     fetchHelper(
       this.url,
@@ -79,7 +79,7 @@ export class ProductVersionInterfaceRightLogic {
     criteria?: Criteria,
     onResult?: (result: CountResult) => void,
     onError?: (error: any) => void,
-    requestParams?: RequestInit
+    requestParams?: Criteria
   ): void {
     fetchHelper(
       this.url,

@@ -9,7 +9,7 @@ export function getBlueprintConnectionRights(
   criteria?: Criteria,
   onResult?: (result: GetResult<BlueprintConnectionRight>) => void,
   onError?: (error: any) => void,
-  requestParams?: RequestInit
+  requestParams?: Criteria
 ): void {
   fetchHelper(
     url,
@@ -31,7 +31,7 @@ export function countBlueprintConnectionRights(
   criteria?: Criteria,
   onResult?: (result: CountResult) => void,
   onError?: (error: any) => void,
-  requestParams?: RequestInit
+  requestParams?: Criteria
 ): void {
   fetchHelper(
     url,
@@ -59,7 +59,7 @@ export class BlueprintConnectionRightLogic {
     criteria?: Criteria,
     onResult?: (result: GetResult<BlueprintConnectionRight>) => void,
     onError?: (error: any) => void,
-    requestParams?: RequestInit
+    requestParams?: Criteria
   ): void {
     fetchHelper(
       this.url,
@@ -79,7 +79,7 @@ export class BlueprintConnectionRightLogic {
     criteria?: Criteria,
     onResult?: (result: CountResult) => void,
     onError?: (error: any) => void,
-    requestParams?: RequestInit
+    requestParams?: Criteria
   ): void {
     fetchHelper(
       this.url,

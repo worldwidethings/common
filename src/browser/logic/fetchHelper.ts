@@ -1,4 +1,5 @@
 import { Result } from 'coderitter-api-rmc'
+import { type Criteria } from 'knight-criteria'
 import { fromJsonObj } from 'knight-json'
 import { instantiator } from '../../shared/Instantiator'
 
@@ -7,7 +8,7 @@ export function fetchHelper<ResultType extends Result>(
   rmc: any,
   onResult?: (getResult: ResultType) => void,
   onError?: (error: any) => void,
-  requestParams?: RequestInit
+  requestParams?: Criteria
 ): void {
   fetch(url, {
     ...requestParams,

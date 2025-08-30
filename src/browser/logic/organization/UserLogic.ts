@@ -10,7 +10,7 @@ export function getUsers(
   criteria?: Criteria,
   onResult?: (result: GetResult<User>) => void,
   onError?: (error: any) => void,
-  requestParams?: RequestInit
+  requestParams?: Criteria
 ): void {
   fetchHelper(
     url,
@@ -32,7 +32,7 @@ export function countUsers(
   criteria?: Criteria,
   onResult?: (result: CountResult) => void,
   onError?: (error: any) => void,
-  requestParams?: RequestInit
+  requestParams?: Criteria
 ): void {
   fetchHelper(
     url,
@@ -54,7 +54,7 @@ export function storeUser(
   user?: Partial<User>,
   onResult?: (result: ChangeResult) => void,
   onError?: (error: any) => void,
-  requestParams?: RequestInit
+  requestParams?: Criteria
 ): void {
   fetchHelper(
     url,
@@ -76,7 +76,7 @@ export function deleteUser(
   user?: Partial<User>,
   onResult?: (result: ChangeResult) => void,
   onError?: (error: any) => void,
-  requestParams?: RequestInit
+  requestParams?: Criteria
 ): void {
   fetchHelper(
     url,
@@ -98,7 +98,7 @@ export function setPasswordOfUser(
   parameters ?: UserSetPasswordParameters,
   onResult ?: (result: Result) => void,
   onError ?: (error: any) => void,
-  requestParams ?: RequestInit
+  requestParams ?: Criteria
 ): void {
   fetchHelper(
     url,
@@ -119,7 +119,7 @@ export function loginUser(
   parameters ?: UserLoginParameters,
   onResult ?: (result: UserLoginResult) => void,
   onError ?: (error: any) => void,
-  requestParams ?: RequestInit
+  requestParams ?: Criteria
 ): void {
   fetchHelper(
     url,
@@ -139,7 +139,7 @@ export function logoutUser(
   token: string,
   onResult ?: (result: Result) => void,
   onError ?: (error: any) => void,
-  requestParams ?: RequestInit
+  requestParams ?: Criteria
 ): void {
   fetchHelper(
     url,
@@ -159,7 +159,7 @@ export function checkTokenOfUser(
   parameters: UserCheckTokenParameters,
   onResult ?: (result: UserCheckTokenResult) => void,
   onError ?: (error: any) => void,
-  requestParams ?: RequestInit
+  requestParams ?: Criteria
 ): void {
   fetchHelper(
     url,
@@ -179,7 +179,7 @@ export function registerUser(
   parameters: UserRegisterParameters,
   onResult ?: (result: Result) => void,
   onError ?: (error: any) => void,
-  requestParams ?: RequestInit
+  requestParams ?: Criteria
 ): void {
   fetchHelper(
     url,
@@ -199,7 +199,7 @@ export function verifyMailOfUser(
   parameters: UserVerifyMailParameters,
   onResult ?: (result: Result) => void,
   onError ?: (error: any) => void,
-  requestParams ?: RequestInit
+  requestParams ?: Criteria
 ): void {
   fetchHelper(
     url,
@@ -219,7 +219,7 @@ export function sendPasswordResetMailForUser(
   parameters: UserSendPasswordResetMailParameters,
   onResult ?: (result: Result) => void,
   onError ?: (error: any) => void,
-  requestParams ?: RequestInit
+  requestParams ?: Criteria
 ): void {
   fetchHelper(
     url,
@@ -239,7 +239,7 @@ export function resetPasswordOfUser(
   parameters: UserResetPasswordParameters,
   onResult ?: (result: Result) => void,
   onError ?: (error: any) => void,
-  requestParams ?: RequestInit
+  requestParams ?: Criteria
 ): void {
   fetchHelper(
     url,
@@ -266,7 +266,7 @@ export class UserLogic {
     criteria?: Criteria,
     onResult?: (result: GetResult<User>) => void,
     onError?: (error: any) => void,
-    requestParams?: RequestInit
+    requestParams?: Criteria
   ): void {
     fetchHelper(
       this.url,
@@ -286,7 +286,7 @@ export class UserLogic {
     criteria?: Criteria,
     onResult?: (result: CountResult) => void,
     onError?: (error: any) => void,
-    requestParams?: RequestInit
+    requestParams?: Criteria
   ): void {
     fetchHelper(
       this.url,
@@ -306,7 +306,7 @@ export class UserLogic {
     user?: Partial<User>,
     onResult?: (result: ChangeResult) => void,
     onError?: (error: any) => void,
-    requestParams?: RequestInit
+    requestParams?: Criteria
   ): void {
     fetchHelper(
       this.url,
@@ -326,7 +326,7 @@ export class UserLogic {
     user?: Partial<User>,
     onResult?: (result: ChangeResult) => void,
     onError?: (error: any) => void,
-    requestParams?: RequestInit
+    requestParams?: Criteria
   ): void {
     fetchHelper(
       this.url,
@@ -346,7 +346,7 @@ export class UserLogic {
     parameters?: UserSetPasswordParameters,
     onResult?: (result: Result) => void,
     onError?: (error: any) => void,
-    requestParams?: RequestInit
+    requestParams?: Criteria
   ): void {
     fetchHelper(
       this.url,
@@ -366,7 +366,7 @@ export class UserLogic {
     parameters?: UserLoginParameters,
     onResult?: (result: UserLoginResult) => void,
     onError?: (error: any) => void,
-    requestParams?: RequestInit
+    requestParams?: Criteria
   ): void {
     fetchHelper(
       this.url,
@@ -384,7 +384,7 @@ export class UserLogic {
   logout(
     onResult?: (result: Result) => void,
     onError?: (error: any) => void,
-    requestParams?: RequestInit
+    requestParams?: Criteria
   ): void {
     fetchHelper(
       this.url,
@@ -403,7 +403,7 @@ export class UserLogic {
     parameters: UserCheckTokenParameters,
     onResult?: (result: UserCheckTokenResult) => void,
     onError?: (error: any) => void,
-    requestParams?: RequestInit
+    requestParams?: Criteria
   ): void {
     fetchHelper(
       this.url,
@@ -422,7 +422,7 @@ export class UserLogic {
     parameters: UserRegisterParameters,
     onResult?: (result: Result) => void,
     onError?: (error: any) => void,
-    requestParams?: RequestInit
+    requestParams?: Criteria
   ): void {
     fetchHelper(
       this.url,
@@ -441,7 +441,7 @@ export class UserLogic {
     parameters: UserVerifyMailParameters,
     onResult?: (result: Result) => void,
     onError?: (error: any) => void,
-    requestParams?: RequestInit
+    requestParams?: Criteria
   ): void {
     fetchHelper(
       this.url,
@@ -460,7 +460,7 @@ export class UserLogic {
     parameters: UserSendPasswordResetMailParameters,
     onResult?: (result: Result) => void,
     onError?: (error: any) => void,
-    requestParams?: RequestInit
+    requestParams?: Criteria
   ): void {
     fetchHelper(
       this.url,
@@ -479,7 +479,7 @@ export class UserLogic {
     parameters: UserResetPasswordParameters,
     onResult?: (result: Result) => void,
     onError?: (error: any) => void,
-    requestParams?: RequestInit
+    requestParams?: Criteria
   ): void {
     fetchHelper(
       this.url,
