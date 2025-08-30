@@ -715,7 +715,7 @@ export const objectDbSchema = {
     }
   },
 
-    'SolutionUsesComponent': {
+  'SolutionUsesComponent': {
     idProps: [ 'id' ],
     relationships: {
       'component': {
@@ -746,6 +746,90 @@ export const objectDbSchema = {
         manyToOne: true,
         thisId: 'solutionUsesComponentId',
         otherEntity: 'SolutionUsesComponent',
+        otherId: 'id'
+      },
+      'user': {
+        manyToOne: true,
+        thisId: 'userId',
+        otherEntity: 'User',
+        otherId: 'id'
+      }
+    }
+  },
+
+  'SolutionUsesProductVersion': {
+    idProps: [ 'id' ],
+    relationships: {
+      'productVersion': {
+        manyToOne: true,
+        thisId: 'productVersionId',
+        otherEntity: 'ProductVersion',
+        otherId: 'id'
+      },
+      'rights': {
+        oneToMany: true,
+        thisId: 'id',
+        otherEntity: 'SolutionUsesProductVersionRight',
+        otherId: 'solutionUsesProductVersionId'
+      },
+      'solution': {
+        manyToOne: true,
+        thisId: 'solutionId',
+        otherEntity: 'Solution',
+        otherId: 'id'
+      }
+    }
+  },
+
+  'SolutionUsesProductVersionRight': {
+    idProps: [ 'id' ],
+    relationships: {
+      'solutionUsesProductVersion': {
+        manyToOne: true,
+        thisId: 'solutionUsesProductVersionId',
+        otherEntity: 'SolutionUsesProductVersion',
+        otherId: 'id'
+      },
+      'user': {
+        manyToOne: true,
+        thisId: 'userId',
+        otherEntity: 'User',
+        otherId: 'id'
+      }
+    }
+  },
+
+  'SolutionUsesSetupBlueprint': {
+    idProps: [ 'id' ],
+    relationships: {
+      'setupBlueprint': {
+        manyToOne: true,
+        thisId: 'setupBlueprintId',
+        otherEntity: 'SetupBlueprint',
+        otherId: 'id'
+      },
+      'rights': {
+        oneToMany: true,
+        thisId: 'id',
+        otherEntity: 'SolutionUsesSetupBlueprintRight',
+        otherId: 'solutionUsesSetupBlueprintId'
+      },
+      'solution': {
+        manyToOne: true,
+        thisId: 'solutionId',
+        otherEntity: 'Solution',
+        otherId: 'id'
+      }
+    }
+  },
+
+  'SolutionUsesSetupBlueprintRight': {
+    idProps: [ 'id' ],
+    relationships: {
+      'solutionUsesSetupBlueprint': {
+        manyToOne: true,
+        thisId: 'solutionUsesSetupBlueprintId',
+        otherEntity: 'SolutionUsesSetupBlueprint',
         otherId: 'id'
       },
       'user': {
