@@ -1,10 +1,9 @@
+import { Entity } from '../Entity'
 import { Organization } from '../organization/Organization'
 import { SolutionRight } from '../right/SolutionRight'
 import { SolutionUsesComponent } from './SolutionUsesComponent'
 
-export class Solution {
-  id?: number
-
+export class Solution extends Entity{
   color?: string
   description?: string
   name?: string
@@ -16,6 +15,7 @@ export class Solution {
   solutionUsesComponents?: SolutionUsesComponent[]
 
   constructor(data?: Partial<Solution>) {
+    super()
     Object.assign(this, data)
   }
 }

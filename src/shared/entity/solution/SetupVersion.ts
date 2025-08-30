@@ -1,3 +1,4 @@
+import { Entity } from '../Entity'
 import { SetupBlueprintVersion } from '../product/SetupBlueprintVersion'
 import { SetupVersionRight } from '../right/SetupVersionRight'
 import { Component } from './Component'
@@ -26,9 +27,7 @@ import { Connection } from './Connection'
  * a component of the given component model version, or compatible, has to
  * be made.
  */
-export class SetupVersion {
-  id?: number
-
+export class SetupVersion extends Entity{
   version?: number
 
   description?: string
@@ -43,6 +42,7 @@ export class SetupVersion {
   setupBlueprintVersion?: SetupBlueprintVersion
 
   constructor(data?: Partial<SetupVersion>) {
+    super()
     Object.assign(this, data)
   }
 }

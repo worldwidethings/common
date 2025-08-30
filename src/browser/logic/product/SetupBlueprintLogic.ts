@@ -1,6 +1,6 @@
 import { ChangeResult, CountResult, GetResult } from 'coderitter-api-rmc'
 import { type Criteria } from 'knight-criteria'
-import { SetupBlueprint } from '../../../shared/domain/product/SetupBlueprint'
+import { SetupBlueprint } from '../../../shared/entity/product/SetupBlueprint'
 import { fetchHelper } from '../fetchHelper'
 
 export function getSetupBlueprints(

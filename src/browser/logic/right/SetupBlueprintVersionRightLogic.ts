@@ -1,6 +1,6 @@
 import { CountResult, GetResult } from 'coderitter-api-rmc'
 import { type Criteria } from 'knight-criteria'
-import { SetupBlueprintVersionRight } from '../../../shared/domain/right/SetupBlueprintVersionRight'
+import { SetupBlueprintVersionRight } from '../../../shared/entity/right/SetupBlueprintVersionRight'
 import { fetchHelper } from '../fetchHelper'
 
 export function getSetupBlueprintVersionRights( 

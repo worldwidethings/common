@@ -1,3 +1,4 @@
+import { Entity } from '../Entity'
 import { InterfaceVersionRight } from '../right/InterfaceVersionRight'
 import { ConnectionPoint } from './ConnectionPoint'
 import { Interface } from './Interface'
@@ -14,10 +15,8 @@ import { ProductVersionInterface } from './ProductVersionInterface'
  * Setup templates also evolve in versions {@link SetupBlueprintVersion} to keep
  * track of each step that was taken to create a working IoT solution.
  */
-export class InterfaceVersion {
-  id?: number
-  
-  description?: string
+export class InterfaceVersion extends Entity {
+    description?: string
   name?: string
   version?: number
 
@@ -29,6 +28,7 @@ export class InterfaceVersion {
   rights?: InterfaceVersionRight[]
 
   constructor(data?: Partial<InterfaceVersion>) {
+    super()
     Object.assign(this, data)
   }
 }

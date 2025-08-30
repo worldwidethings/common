@@ -1,10 +1,9 @@
+import { Entity } from '../Entity'
 import { SetupBlueprint } from '../product/SetupBlueprint'
 import { SolutionUsesSetupBlueprintRight } from '../right/SolutionUsesSetupBlueprintRight'
 import { Solution } from './Solution'
 
-export class SolutionUsesSetupBlueprint {
-  id?: number
-
+export class SolutionUsesSetupBlueprint extends Entity {
   setupBlueprintId?: number
   solutionId?: number
 
@@ -13,6 +12,7 @@ export class SolutionUsesSetupBlueprint {
   solution?: Solution
 
   constructor(data?: Partial<SolutionUsesSetupBlueprint>) {
+    super()
     Object.assign(this, data)
   }
 }

@@ -1,3 +1,4 @@
+import { Entity } from '../Entity'
 import { ConnectionPointRight } from '../right/ConnectionPointRight'
 import { Connection } from '../solution/Connection'
 import { BlueprintConnection } from './BlueprintConnection'
@@ -12,7 +13,7 @@ import { InterfaceVersion } from './InterfaceVersion'
  * define component setup templates, thus component setups that can be
  * applied to any component in general, the co
  */
-export class ConnectionPoint {
+export class ConnectionPoint extends Entity {
   id?: number
 
   description?: string
@@ -26,6 +27,7 @@ export class ConnectionPoint {
   rights?: ConnectionPointRight[]
 
   constructor(data?: Partial<ConnectionPoint>) {
+    super()
     Object.assign(this, data)
   }
 }

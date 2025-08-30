@@ -1,6 +1,6 @@
 import { CountResult, GetResult } from 'coderitter-api-rmc'
 import { type Criteria } from 'knight-criteria'
-import { BlueprintConnectionRight } from '../../../shared/domain/right/BlueprintConnectionRight'
+import { BlueprintConnectionRight } from '../../../shared/entity/right/BlueprintConnectionRight'
 import { fetchHelper } from '../fetchHelper'
 
 export function getBlueprintConnectionRights( 

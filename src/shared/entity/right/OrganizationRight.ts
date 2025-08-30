@@ -1,9 +1,8 @@
+import { Entity } from '../Entity'
 import { Organization } from '../organization/Organization'
 import { User } from '../organization/User'
 
-export class OrganizationRight {
-  id?: number
-
+export class OrganizationRight extends Entity {
   owner?: boolean
   admin?: boolean
 
@@ -14,6 +13,7 @@ export class OrganizationRight {
   user?: User
 
   constructor(data?: Partial<OrganizationRight>) {
+    super()
     Object.assign(this, data)
   }
 }

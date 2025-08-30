@@ -1,12 +1,11 @@
+import { Entity } from '../Entity'
 import { Product } from '../product/Product'
 import { SetupBlueprint } from '../product/SetupBlueprint'
 import { OrganizationRight } from '../right/OrganizationRight'
 import { Component } from '../solution/Component'
 import { Solution } from '../solution/Solution'
 
-export class Organization {
-  id?: number
-  
+export class Organization extends Entity {
   description?: string
   name?: string
 
@@ -18,6 +17,7 @@ export class Organization {
   solutions?: Solution[]
 
   constructor(data?: Partial<Organization>) {
+    super()
     Object.assign(this, data)
   }
 }

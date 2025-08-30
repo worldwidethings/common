@@ -1,3 +1,4 @@
+import { Entity } from '../Entity'
 import { BlueprintConnectionRight } from '../right/BlueprintConnectionRight'
 import { ConnectionPoint } from './ConnectionPoint'
 import { ProductVersion } from './ProductVersion'
@@ -12,9 +13,7 @@ import { SetupBlueprintVersion } from './SetupBlueprintVersion'
  * define component setup templates, thus component setups that can be
  * applied to any component in general, the co
  */
-export class BlueprintConnection {
-  id?: number
-
+export class BlueprintConnection extends Entity {
   description?: string
 
   connectionPointId?: number
@@ -27,6 +26,7 @@ export class BlueprintConnection {
   setupBlueprintVersion?: SetupBlueprintVersion
 
   constructor(data?: Partial<BlueprintConnection>) {
+    super()
     Object.assign(this, data)
   }
 }

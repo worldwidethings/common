@@ -1,6 +1,6 @@
 import { ChangeResult, CountResult, GetResult } from 'coderitter-api-rmc'
 import { type Criteria } from 'knight-criteria'
-import { ProductType } from '../../../shared/domain/product/ProductType'
+import { ProductType } from '../../../shared/entity/product/ProductType'
 import { fetchHelper } from '../fetchHelper'
 
 export function getProductTypes(

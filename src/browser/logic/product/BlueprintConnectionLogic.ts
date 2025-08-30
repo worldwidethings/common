@@ -1,6 +1,6 @@
 import { ChangeResult, CountResult, GetResult } from 'coderitter-api-rmc'
 import { type Criteria } from 'knight-criteria'
-import { BlueprintConnection } from '../../../shared/domain/product/BlueprintConnection'
+import { BlueprintConnection } from '../../../shared/entity/product/BlueprintConnection'
 import { fetchHelper } from '../fetchHelper'
 
 export function getBlueprintConnections(

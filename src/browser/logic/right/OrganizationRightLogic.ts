@@ -1,6 +1,6 @@
 import { ChangeResult, CountResult, GetResult } from 'coderitter-api-rmc'
 import { type Criteria } from 'knight-criteria'
-import { OrganizationRight } from '../../../shared/domain/right/OrganizationRight'
+import { OrganizationRight } from '../../../shared/entity/right/OrganizationRight'
 import { fetchHelper } from '../fetchHelper'
 
 export function getOrganizationRights( 

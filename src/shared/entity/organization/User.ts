@@ -1,3 +1,4 @@
+import { Entity } from '../Entity'
 import { BlueprintConnectionRight } from '../right/BlueprintConnectionRight'
 import { ComponentRight } from '../right/ComponentRight'
 import { ConnectionPointRight } from '../right/ConnectionPointRight'
@@ -14,9 +15,7 @@ import { SolutionRight } from '../right/SolutionRight'
 import { SolutionUsesComponentRight } from '../right/SolutionUsesComponentRight'
 import { UserRight } from '../right/UserRight'
 
-export class User {
-  id?: number
-
+export class User extends Entity {
   active?: boolean
   email?: string
   firstName?: string
@@ -46,6 +45,7 @@ export class User {
   userRights?: UserRight[]
   
   constructor(data?: Partial<User>) {
+    super()
     Object.assign(this, data)
   }
 

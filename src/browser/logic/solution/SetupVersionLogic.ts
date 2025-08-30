@@ -1,6 +1,6 @@
 import { ChangeResult, CountResult, GetResult } from 'coderitter-api-rmc'
 import { type Criteria } from 'knight-criteria'
-import { SetupVersion } from '../../../shared/domain/solution/SetupVersion'
+import { SetupVersion } from '../../../shared/entity/solution/SetupVersion'
 import { fetchHelper } from '../fetchHelper'
 
 export function getSetupVersions(

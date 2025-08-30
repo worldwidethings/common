@@ -1,3 +1,4 @@
+import { Entity } from '../Entity'
 import { Organization } from '../organization/Organization'
 import { ProductRight } from '../right/ProductRight'
 import { ProductType } from './ProductType'
@@ -15,10 +16,7 @@ import { ProductVersion } from './ProductVersion'
  * relevant for hardware products as it is for software products, which evolve
  * in many iterations.
  */
-export class Product {
-  id?: number
-
-  description?: string
+export class Product extends Entity {  description?: string
   name?: string
 
   organizationId?: number
@@ -30,6 +28,7 @@ export class Product {
   rights?: ProductRight[]
 
   constructor(data?: Partial<Product>) {
+    super()
     Object.assign(this, data)
   }
 }

@@ -1,3 +1,4 @@
+import { Entity } from '../Entity'
 import { Organization } from '../organization/Organization'
 import { SetupBlueprintRight } from '../right/SetupBlueprintRight'
 import { ProductVersion } from './ProductVersion'
@@ -14,9 +15,7 @@ import { SetupBlueprintVersion } from './SetupBlueprintVersion'
  * Setup templates also evolve in versions {@link SetupBlueprintVersion} to keep
  * track of each step that was taken to create a working IoT solution.
  */
-export class SetupBlueprint {
-  id?: number
-
+export class SetupBlueprint extends Entity{
   description?: string
   name?: string
 
@@ -29,6 +28,7 @@ export class SetupBlueprint {
   setupBlueprintVersions?: SetupBlueprintVersion[]
 
   constructor(data?: Partial<SetupBlueprint>) {
+    super()
     Object.assign(this, data)
   }
 

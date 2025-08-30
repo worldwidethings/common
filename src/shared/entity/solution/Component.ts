@@ -4,6 +4,7 @@ import { ComponentRight } from '../right/ComponentRight'
 import { SolutionUsesComponent } from './SolutionUsesComponent'
 import { Connection } from './Connection'
 import { SetupVersion } from './SetupVersion'
+import { Entity } from '../Entity'
 
 /**
  * A component is a component in the context of an IoT solution. Thus it is an
@@ -22,9 +23,7 @@ import { SetupVersion } from './SetupVersion'
  * Components belong to one organization {@link Organization} and there they
  * are are part of arbitrary many IoT solutions {@link Solution}.
  */
-export class Component {
-  id?: number
-
+export class Component extends Entity {
   description?: string
   name?: string
 
@@ -40,6 +39,7 @@ export class Component {
   solutionUsesComponents?: SolutionUsesComponent[]
 
   constructor(data?: Partial<Component>) {
+    super()
     Object.assign(this, data)
   }
 

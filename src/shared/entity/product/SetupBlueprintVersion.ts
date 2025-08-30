@@ -1,3 +1,4 @@
+import { Entity } from '../Entity'
 import { SetupBlueprintVersionRight } from '../right/SetupBlueprintVersionRight'
 import { SetupVersion } from '../solution/SetupVersion'
 import { BlueprintConnection } from './BlueprintConnection'
@@ -21,12 +22,10 @@ import { SetupBlueprint } from './SetupBlueprint'
  * established component connections are listed. This class here is more
  * like a name giver for a certain component setup.
  */
-export class SetupBlueprintVersion {
-  id?: number
-  version?: number
-
+export class SetupBlueprintVersion extends Entity {  
   description?: string
   name?: string
+  version?: number
 
   setupBlueprintId?: number
 
@@ -36,6 +35,7 @@ export class SetupBlueprintVersion {
   setupVersions?: SetupVersion[]
 
   constructor(data?: Partial<SetupBlueprintVersion>) {
+    super()
     Object.assign(this, data)
   }
 }

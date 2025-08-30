@@ -1,17 +1,17 @@
+import { Entity } from '../Entity'
 import { Component } from '../solution/Component'
 import { Product } from './Product'
 import { ProductVersion } from './ProductVersion'
 import { SetupBlueprint } from './SetupBlueprint'
 
-export class ProductType {
-  id?: number
-
+export class ProductType extends Entity {
   description?: string
   name?: string
 
   products?: Product[]
 
   constructor(data?: Partial<ProductType>) {
+    super()
     Object.assign(this, data)
   }
 

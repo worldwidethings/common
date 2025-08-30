@@ -1,16 +1,7 @@
 import { expect } from 'chai'
 import { checkSchema } from 'knight-object-db'
 import 'mocha'
-import { BlueprintConnection, Component, ComponentRight, Connection, ConnectionPoint, ConnectionRight, Interface, InterfaceVersion, objectDbSchema, Organization, Product, ProductType, ProductVersion, ProductVersionInterface, ProductVersionInterfaceRight, SetupBlueprint, SetupBlueprintVersion, SetupVersion, SetupVersionRight, Solution, SolutionRight, SolutionUsesComponent, SolutionUsesComponentRight, SolutionUsesProductVersion, SolutionUsesProductVersionRight, SolutionUsesSetupBlueprint, SolutionUsesSetupBlueprintRight, User, UserRight } from '../src'
-import { BlueprintConnectionRight } from '../src/shared/domain/right/BlueprintConnectionRight'
-import { ConnectionPointRight } from '../src/shared/domain/right/ConnectionPointRight'
-import { InterfaceRight } from '../src/shared/domain/right/InterfaceRight'
-import { InterfaceVersionRight } from '../src/shared/domain/right/InterfaceVersionRight'
-import { OrganizationRight } from '../src/shared/domain/right/OrganizationRight'
-import { ProductRight } from '../src/shared/domain/right/ProductRight'
-import { ProductVersionRight } from '../src/shared/domain/right/ProductVersionRight'
-import { SetupBlueprintRight } from '../src/shared/domain/right/SetupBlueprintRight'
-import { SetupBlueprintVersionRight } from '../src/shared/domain/right/SetupBlueprintVersionRight'
+import { BlueprintConnection, BlueprintConnectionRight, Component, ComponentRight, Connection, ConnectionPoint, ConnectionPointRight, ConnectionRight, Interface, InterfaceRight, InterfaceVersion, InterfaceVersionRight, objectDbSchema, Organization, OrganizationRight, Product, ProductRight, ProductType, ProductVersion, ProductVersionInterface, ProductVersionInterfaceRight, ProductVersionRight, SetupBlueprint, SetupBlueprintRight, SetupBlueprintVersion, SetupBlueprintVersionRight, SetupVersion, SetupVersionRight, Solution, SolutionRight, SolutionUsesComponent, SolutionUsesComponentRight, SolutionUsesProductVersion, SolutionUsesProductVersionRight, SolutionUsesSetupBlueprint, SolutionUsesSetupBlueprintRight, User, UserRight } from '../src'
 
 describe('ObjectDbSchema', function () {
   it('should be valid', function () {
@@ -374,7 +365,7 @@ describe('ObjectDbSchema', function () {
       'ProductVersionInterfaceRight: The given reference objects defines further properties which were not mentioned in the schema: admin, developer, maintainer, reporter',
       'SetupBlueprint: The given reference objects defines further properties which were not mentioned in the schema: description, name',
       'SetupBlueprintRight: The given reference objects defines further properties which were not mentioned in the schema: admin, developer, maintainer, reporter',
-      'SetupBlueprintVersion: The given reference objects defines further properties which were not mentioned in the schema: version, description, name',
+      'SetupBlueprintVersion: The given reference objects defines further properties which were not mentioned in the schema: description, name, version',
       'SetupBlueprintVersionRight: The given reference objects defines further properties which were not mentioned in the schema: admin, developer, maintainer, reporter',
       'SetupVersion: The given reference objects defines further properties which were not mentioned in the schema: version, description, name',
       'SetupVersionRight: The given reference objects defines further properties which were not mentioned in the schema: admin, developer, maintainer, reporter',

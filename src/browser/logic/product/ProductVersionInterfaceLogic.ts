@@ -1,6 +1,6 @@
 import { ChangeResult, CountResult, GetResult } from 'coderitter-api-rmc'
 import { type Criteria } from 'knight-criteria'
-import { ProductVersionInterface } from '../../../shared/domain/product/ProductVersionInterface'
+import { ProductVersionInterface } from '../../../shared/entity/product/ProductVersionInterface'
 import { fetchHelper } from '../fetchHelper'
 
 export function getProductVersionInterfaces(

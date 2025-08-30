@@ -1,7 +1,7 @@
 import { ChangeResult, CountResult, GetResult, Result } from 'coderitter-api-rmc'
 import { type Criteria } from 'knight-criteria'
 import { UserLoginResult, type UserCheckTokenParameters, type UserCheckTokenResult, type UserLoginParameters, type UserRegisterParameters, type UserResetPasswordParameters, type UserSendPasswordResetMailParameters, type UserSetPasswordParameters, type UserVerifyMailParameters } from '../../../shared/api/userApi'
-import { User } from '../../../shared/domain/organization/User'
+import { User } from '../../../shared/entity/organization/User'
 import { fetchHelper } from '../fetchHelper'
 
 export function getUsers(

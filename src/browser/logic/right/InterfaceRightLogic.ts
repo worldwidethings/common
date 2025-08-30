@@ -1,6 +1,6 @@
 import { CountResult, GetResult } from 'coderitter-api-rmc'
 import { type Criteria } from 'knight-criteria'
-import { InterfaceRight } from '../../../shared/domain/right/InterfaceRight'
+import { InterfaceRight } from '../../../shared/entity/right/InterfaceRight'
 import { fetchHelper } from '../fetchHelper'
 
 export function getInterfaceRights( 

@@ -1,6 +1,6 @@
 import { CountResult, GetResult } from 'coderitter-api-rmc'
 import { type Criteria } from 'knight-criteria'
-import { ConnectionPointRight } from '../../../shared/domain/right/ConnectionPointRight'
+import { ConnectionPointRight } from '../../../shared/entity/right/ConnectionPointRight'
 import { fetchHelper } from '../fetchHelper'
 
 export function getConnectionPointRights( 

@@ -5,6 +5,7 @@ import { ConnectionPoint } from './ConnectionPoint'
 import { ProductVersionInterface } from './ProductVersionInterface'
 import { Product } from './Product'
 import { SetupBlueprint } from './SetupBlueprint'
+import { Entity } from '../Entity'
 
 /**
  * Products can evolve in versions. This is not so often found with hardware
@@ -25,9 +26,7 @@ import { SetupBlueprint } from './SetupBlueprint'
  * which then would be equipped with concrete components of the predefined
  * product versions.
  */
-export class ProductVersion {
-  id?: number
-  
+export class ProductVersion extends Entity {
   description?: string
   name?: string
   version?: string
@@ -42,6 +41,7 @@ export class ProductVersion {
   setupBlueprints?: SetupBlueprint[]
 
   constructor(data?: Partial<ProductVersion>) {
+    super()
     Object.assign(this, data)
   }
 

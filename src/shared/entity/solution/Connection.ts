@@ -1,3 +1,4 @@
+import { Entity } from '../Entity'
 import { ConnectionPoint } from '../product/ConnectionPoint'
 import { ConnectionRight } from '../right/ConnectionRight'
 import { Component } from './Component'
@@ -12,9 +13,7 @@ import { SetupVersion } from './SetupVersion'
  * define component setup templates, thus component setups that can be
  * applied to any component in general, the co
  */
-export class Connection {
-  id?: number
-
+export class Connection extends Entity{
   description?: string
   latestSetupVersion?: boolean
 
@@ -30,6 +29,7 @@ export class Connection {
   setupVersion?: SetupVersion
 
   constructor(data?: Partial<Connection>) {
+    super()
     Object.assign(this, data)
   }
 }

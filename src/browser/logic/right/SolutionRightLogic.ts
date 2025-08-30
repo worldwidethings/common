@@ -1,6 +1,6 @@
 import { ChangeResult, CountResult, GetResult } from 'coderitter-api-rmc'
 import { type Criteria } from 'knight-criteria'
-import { SolutionRight } from '../../../shared/domain/right/SolutionRight'
+import { SolutionRight } from '../../../shared/entity/right/SolutionRight'
 import { fetchHelper } from '../fetchHelper'
 
 export function getSolutionRights(
