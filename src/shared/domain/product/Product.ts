@@ -18,7 +18,6 @@ import { ProductVersion } from './ProductVersion'
 export class Product {
   id?: number
 
-  creationDate?: Date
   description?: string
   name?: string
 

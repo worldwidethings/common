@@ -18,7 +18,6 @@ export class User {
   id?: number
 
   active?: boolean
-  creationDate?: Date
   email?: string
   firstName?: string
   lastName?: string

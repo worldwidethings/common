@@ -15,7 +15,6 @@ import { InterfaceVersion } from './InterfaceVersion'
 export class ConnectionPoint {
   id?: number
 
-  creationDate?: Date
   description?: string
   name?: string
 

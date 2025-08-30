@@ -25,7 +25,6 @@ import { SetupVersion } from './SetupVersion'
 export class Component {
   id?: number
 
-  creationDate?: Date
   description?: string
   name?: string
 

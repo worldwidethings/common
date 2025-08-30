@@ -6,7 +6,6 @@ export class Solution {
   id?: number
 
   color?: string
-  creationDate?: Date
   description?: string
   name?: string
 

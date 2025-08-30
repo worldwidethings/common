@@ -28,7 +28,6 @@ import { SetupBlueprint } from './SetupBlueprint'
 export class ProductVersion {
   id?: number
   
-  creationDate?: Date
   description?: string
   name?: string
   version?: string

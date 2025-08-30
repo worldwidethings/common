@@ -15,7 +15,6 @@ import { SetupBlueprintVersion } from './SetupBlueprintVersion'
 export class BlueprintConnection {
   id?: number
 
-  creationDate?: Date
   description?: string
 
   connectionPointId?: number

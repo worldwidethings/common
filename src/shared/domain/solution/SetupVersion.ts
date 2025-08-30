@@ -31,7 +31,6 @@ export class SetupVersion {
 
   version?: number
 
-  creationDate?: Date
   description?: string
   name?: string
 

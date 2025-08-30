@@ -5,7 +5,6 @@ import { Solution } from './Solution'
 export class SolutionUsesComponent {
   id?: number
 
-  creationDate?: Date
   description?: string
 
   componentId?: number

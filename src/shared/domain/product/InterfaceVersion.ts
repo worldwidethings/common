@@ -17,7 +17,6 @@ import { ProductVersionInterface } from './ProductVersionInterface'
 export class InterfaceVersion {
   id?: number
   
-  creationDate?: Date
   description?: string
   name?: string
   version?: number

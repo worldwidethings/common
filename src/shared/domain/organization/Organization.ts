@@ -7,7 +7,6 @@ import { Solution } from '../solution/Solution'
 export class Organization {
   id?: number
   
-  creationDate?: Date
   description?: string
   name?: string
 

@@ -15,7 +15,6 @@ import { SetupVersion } from './SetupVersion'
 export class Connection {
   id?: number
 
-  creationDate?: Date
   description?: string
   latestSetupVersion?: boolean
 

@@ -25,7 +25,6 @@ export class SetupBlueprintVersion {
   id?: number
   version?: number
 
-  creationDate?: Date
   description?: string
   name?: string
 

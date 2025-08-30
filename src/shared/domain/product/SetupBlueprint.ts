@@ -17,7 +17,6 @@ import { SetupBlueprintVersion } from './SetupBlueprintVersion'
 export class SetupBlueprint {
   id?: number
 
-  creationDate?: Date
   description?: string
   name?: string
 
@@ -36,8 +35,8 @@ export class SetupBlueprint {
   sort(): void {
     if (this.setupBlueprintVersions) {
       this.setupBlueprintVersions.sort((a, b) => {
-        if (a.creationDate != undefined && b.creationDate != undefined) {
-          if (a.creationDate.valueOf() > b.creationDate.valueOf()) {
+        if (a.version != undefined && b.version != undefined) {
+          if (a.version > a.version) {
             return -1
           }
           else {
@@ -45,7 +44,7 @@ export class SetupBlueprint {
           }
         }
 
-        if (a.creationDate != undefined) {
+        if (a.version != undefined) {
           return -1
         }
 

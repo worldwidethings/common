@@ -5,7 +5,6 @@ import { InterfaceVersion } from './InterfaceVersion'
 export class Interface {
   id?: number
 
-  creationDate?: Date
   description?: string
   name?: string
 

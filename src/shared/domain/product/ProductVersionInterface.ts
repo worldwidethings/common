@@ -4,7 +4,7 @@ import { ProductVersion } from './ProductVersion'
 
 export class ProductVersionInterface {
   id?: number
-  creationDate?: Date
+
   description?: string
 
   interfaceVersionId?: number

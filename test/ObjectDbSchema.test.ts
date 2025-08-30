@@ -1,7 +1,7 @@
 import { expect } from 'chai'
 import { checkSchema } from 'knight-object-db'
 import 'mocha'
-import { BlueprintConnection, Component, ComponentRight, Connection, ConnectionPoint, ConnectionRight, Interface, InterfaceVersion, objectDbSchema, Organization, Product, ProductType, ProductVersion, ProductVersionInterface, ProductVersionInterfaceRight, SetupBlueprint, SetupBlueprintVersion, SetupVersion, SetupVersionRight, Solution, SolutionRight, SolutionUsesComponent, SolutionUsesComponentRight, User, UserRight } from '../src'
+import { BlueprintConnection, Component, ComponentRight, Connection, ConnectionPoint, ConnectionRight, Interface, InterfaceVersion, objectDbSchema, Organization, Product, ProductType, ProductVersion, ProductVersionInterface, ProductVersionInterfaceRight, SetupBlueprint, SetupBlueprintVersion, SetupVersion, SetupVersionRight, Solution, SolutionRight, SolutionUsesComponent, SolutionUsesComponentRight, SolutionUsesProductVersion, SolutionUsesProductVersionRight, SolutionUsesSetupBlueprint, SolutionUsesSetupBlueprintRight, User, UserRight } from '../src'
 import { BlueprintConnectionRight } from '../src/shared/domain/right/BlueprintConnectionRight'
 import { ConnectionPointRight } from '../src/shared/domain/right/ConnectionPointRight'
 import { InterfaceRight } from '../src/shared/domain/right/InterfaceRight'
@@ -288,6 +288,40 @@ describe('ObjectDbSchema', function () {
         user: {} as any
       }),
 
+      new SolutionUsesProductVersion({
+        id: 1,
+        productVersionId: 1,
+        solutionId: 1,
+        productVersion: {} as any,
+        rights: [],
+        solution: {} as any
+      }),
+
+      new SolutionUsesProductVersionRight({
+        id: 1,
+        solutionUsesProductVersionId: 1,
+        userId: 1,
+        solutionUsesProductVersion: {} as any,
+        user: {} as any
+      }),
+
+      new SolutionUsesSetupBlueprint({
+        id: 1,
+        setupBlueprintId: 1,
+        solutionId: 1,
+        setupBlueprint: {} as any,
+        rights: [],
+        solution: {} as any
+      }),
+
+      new SolutionUsesSetupBlueprintRight({
+        id: 1,
+        solutionUsesSetupBlueprintId: 1,
+        userId: 1,
+        solutionUsesSetupBlueprint: {} as any,
+        user: {} as any
+      }),
+
       new User({
         id: 1,
         blueprintConnectionRights: [],
@@ -317,38 +351,40 @@ describe('ObjectDbSchema', function () {
     ])
 
     expect(issues).to.deep.equal([
-      'BlueprintConnection: The given reference objects defines further properties which were not mentioned in the schema: creationDate, description',
+      'BlueprintConnection: The given reference objects defines further properties which were not mentioned in the schema: description',
       'BlueprintConnectionRight: The given reference objects defines further properties which were not mentioned in the schema: admin, developer, maintainer, reporter',
-      'Component: The given reference objects defines further properties which were not mentioned in the schema: creationDate, description, name',
+      'Component: The given reference objects defines further properties which were not mentioned in the schema: description, name',
       'ComponentRight: The given reference objects defines further properties which were not mentioned in the schema: admin, developer, maintainer, reporter',
-      'Connection: The given reference objects defines further properties which were not mentioned in the schema: creationDate, description, latestSetupVersion',
+      'Connection: The given reference objects defines further properties which were not mentioned in the schema: description, latestSetupVersion',
       'ConnectionRight: The given reference objects defines further properties which were not mentioned in the schema: admin, developer, maintainer, reporter',
-      'ConnectionPoint: The given reference objects defines further properties which were not mentioned in the schema: creationDate, description, name',
+      'ConnectionPoint: The given reference objects defines further properties which were not mentioned in the schema: description, name',
       'ConnectionPointRight: The given reference objects defines further properties which were not mentioned in the schema: admin, developer, maintainer, reporter',
-      'Interface: The given reference objects defines further properties which were not mentioned in the schema: creationDate, description, name',
+      'Interface: The given reference objects defines further properties which were not mentioned in the schema: description, name',
       'InterfaceRight: The given reference objects defines further properties which were not mentioned in the schema: admin, developer, maintainer, reporter',
-      'InterfaceVersion: The given reference objects defines further properties which were not mentioned in the schema: creationDate, description, name, version',
+      'InterfaceVersion: The given reference objects defines further properties which were not mentioned in the schema: description, name, version',
       'InterfaceVersionRight: The given reference objects defines further properties which were not mentioned in the schema: admin, developer, maintainer, reporter',
-      'Organization: The given reference objects defines further properties which were not mentioned in the schema: creationDate, description, name',
+      'Organization: The given reference objects defines further properties which were not mentioned in the schema: description, name',
       'OrganizationRight: The given reference objects defines further properties which were not mentioned in the schema: owner, admin',
-      'Product: The given reference objects defines further properties which were not mentioned in the schema: creationDate, description, name',
+      'Product: The given reference objects defines further properties which were not mentioned in the schema: description, name',
       'ProductRight: The given reference objects defines further properties which were not mentioned in the schema: admin, developer, maintainer, reporter',
       'ProductType: The given reference objects defines further properties which were not mentioned in the schema: description, name',
-      'ProductVersion: The given reference objects defines further properties which were not mentioned in the schema: creationDate, description, name, version',
+      'ProductVersion: The given reference objects defines further properties which were not mentioned in the schema: description, name, version',
       'ProductVersionRight: The given reference objects defines further properties which were not mentioned in the schema: admin, developer, maintainer, reporter',
-      'ProductVersionInterface: The given reference objects defines further properties which were not mentioned in the schema: creationDate, description',
+      'ProductVersionInterface: The given reference objects defines further properties which were not mentioned in the schema: description',
       'ProductVersionInterfaceRight: The given reference objects defines further properties which were not mentioned in the schema: admin, developer, maintainer, reporter',
-      'SetupBlueprint: The given reference objects defines further properties which were not mentioned in the schema: creationDate, description, name',
+      'SetupBlueprint: The given reference objects defines further properties which were not mentioned in the schema: description, name',
       'SetupBlueprintRight: The given reference objects defines further properties which were not mentioned in the schema: admin, developer, maintainer, reporter',
-      'SetupBlueprintVersion: The given reference objects defines further properties which were not mentioned in the schema: version, creationDate, description, name',
+      'SetupBlueprintVersion: The given reference objects defines further properties which were not mentioned in the schema: version, description, name',
       'SetupBlueprintVersionRight: The given reference objects defines further properties which were not mentioned in the schema: admin, developer, maintainer, reporter',
-      'SetupVersion: The given reference objects defines further properties which were not mentioned in the schema: version, creationDate, description, name',
+      'SetupVersion: The given reference objects defines further properties which were not mentioned in the schema: version, description, name',
       'SetupVersionRight: The given reference objects defines further properties which were not mentioned in the schema: admin, developer, maintainer, reporter',
-      'Solution: The given reference objects defines further properties which were not mentioned in the schema: color, creationDate, description, name',
+      'Solution: The given reference objects defines further properties which were not mentioned in the schema: color, description, name',
       'SolutionRight: The given reference objects defines further properties which were not mentioned in the schema: admin, developer, maintainer, reporter',
-      'SolutionUsesComponent: The given reference objects defines further properties which were not mentioned in the schema: creationDate, description',
+      'SolutionUsesComponent: The given reference objects defines further properties which were not mentioned in the schema: description',
       'SolutionUsesComponentRight: The given reference objects defines further properties which were not mentioned in the schema: admin, developer, maintainer, reporter',
-      'User: The given reference objects defines further properties which were not mentioned in the schema: active, creationDate, email, firstName, lastName, passwordHash, passwordResetToken, passwordResetTokenCreationDate, registerToken, registerTokenCreationDate, salt, token',
+      'SolutionUsesProductVersionRight: The given reference objects defines further properties which were not mentioned in the schema: admin, developer, maintainer, reporter',
+      'SolutionUsesSetupBlueprintRight: The given reference objects defines further properties which were not mentioned in the schema: admin, developer, maintainer, reporter',
+      'User: The given reference objects defines further properties which were not mentioned in the schema: active, email, firstName, lastName, passwordHash, passwordResetToken, passwordResetTokenCreationDate, registerToken, registerTokenCreationDate, salt, token',
       'UserRight: The given reference objects defines further properties which were not mentioned in the schema: admin'
       ], '\n' + issues.join('\n') + '\n')
   })
