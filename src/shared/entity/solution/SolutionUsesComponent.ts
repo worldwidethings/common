@@ -4,8 +4,6 @@ import { Component } from './Component'
 import { Solution } from './Solution'
 
 export class SolutionUsesComponent extends Entity{
-  description?: string
-
   componentId?: number
   solutionId?: number
 

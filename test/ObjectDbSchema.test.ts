@@ -375,7 +375,6 @@ describe('ObjectDbSchema', function () {
       'SetupVersionRight: The given reference objects defines further properties which were not mentioned in the schema: admin, developer, maintainer, reporter',
       'Solution: The given reference objects defines further properties which were not mentioned in the schema: color, description, name',
       'SolutionRight: The given reference objects defines further properties which were not mentioned in the schema: admin, developer, maintainer, reporter',
-      'SolutionUsesComponent: The given reference objects defines further properties which were not mentioned in the schema: description',
       'SolutionUsesComponentRight: The given reference objects defines further properties which were not mentioned in the schema: admin, developer, maintainer, reporter',
       'SolutionUsesProductVersionRight: The given reference objects defines further properties which were not mentioned in the schema: admin, developer, maintainer, reporter',
       'SolutionUsesSetupBlueprintRight: The given reference objects defines further properties which were not mentioned in the schema: admin, developer, maintainer, reporter',
