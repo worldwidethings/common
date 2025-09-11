@@ -4,6 +4,7 @@ export * from './shared/Instantiator'
 
 export * from './shared/api/userApi'
 
+export * from './shared/entity/Entity'
 export * from './shared/entity/objectDbSchema'
 export * from './shared/entity/organization/Organization'
 export * from './shared/entity/organization/User'
