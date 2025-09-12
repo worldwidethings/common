@@ -21,12 +21,12 @@ export class User extends Entity {
   firstName?: string
   lastName?: string
   passwordHash?: string
-  passwordResetToken?: string
-  passwordResetTokenCreationDate?: Date
-  registerToken?: string
-  registerTokenCreationDate?: Date
+  passwordResetToken?: string|null
+  passwordResetTokenCreationDate?: Date|null
+  registerToken?: string|null
+  registerTokenCreationDate?: Date|null
   salt?: string
-  token?: string | null
+  token?: string|null
 
   blueprintConnectionRights?: BlueprintConnectionRight[]
   componentRights?: ComponentRight[]
