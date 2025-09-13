@@ -16,17 +16,9 @@ import { SolutionUsesComponentRight } from '../right/SolutionUsesComponentRight'
 import { UserRight } from '../right/UserRight'
 
 export class User extends Entity {
-  active?: boolean
   email?: string
   firstName?: string
   lastName?: string
-  passwordHash?: string
-  passwordResetToken?: string|null
-  passwordResetTokenCreationDate?: Date|null
-  registerToken?: string|null
-  registerTokenCreationDate?: Date|null
-  salt?: string
-  token?: string|null
 
   blueprintConnectionRights?: BlueprintConnectionRight[]
   componentRights?: ComponentRight[]
