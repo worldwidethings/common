@@ -378,7 +378,7 @@ describe('ObjectDbSchema', function () {
       'SolutionUsesComponentRight: The given reference objects defines further properties which were not mentioned in the schema: admin, developer, maintainer, reporter',
       'SolutionUsesProductVersionRight: The given reference objects defines further properties which were not mentioned in the schema: admin, developer, maintainer, reporter',
       'SolutionUsesSetupBlueprintRight: The given reference objects defines further properties which were not mentioned in the schema: admin, developer, maintainer, reporter',
-      'User: The given reference objects defines further properties which were not mentioned in the schema: active, email, firstName, lastName, passwordHash, passwordResetToken, passwordResetTokenCreationDate, registerToken, registerTokenCreationDate, salt, token',
+      'User: The given reference objects defines further properties which were not mentioned in the schema: email, firstName, lastName',
       'UserRight: The given reference objects defines further properties which were not mentioned in the schema: admin'
       ], '\n' + issues.join('\n') + '\n')
   })
